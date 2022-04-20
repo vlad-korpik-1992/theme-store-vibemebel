@@ -79,7 +79,7 @@
                                         <div class="category__link"><? echo $category->cat_name;?></div>
                                     </div>
                                 </a>
-                                <div class="category__box">
+                                <div class="category__box category__box_xlmb">
                                     <div class="category__box__circle">
                                         <svg class="category__box__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                             <image  x="0px" y="0px" width="48px" height="64px"  xlink:href="data:img/png;base64,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" />
@@ -93,7 +93,7 @@
                             </div><?
                         endif;
                         if($count_category === 2):?>
-                            <div class="column__half">
+                            <div class="column__half column__half_lg">
                                 <div class="box">
                                     <?if($count_category === 2):?>
                                         <div class="column__half">
@@ -128,7 +128,7 @@
                             </div><?
                         endif;
                         if($count_category === 5):?>
-                            <div class="column__half">
+                            <div class="column__half column__half_md">
                                 <a class="column__half__link" href="/product-category/<?echo $category->slug;?>">
                                     <div class="category__inner category__inner_first" style="background-image: url(<? echo $image;?>);">
                                         <div class="category__link"><? echo $category->cat_name;?></div>
@@ -168,7 +168,7 @@
                         <p class="benefits__column__text"><?php the_field('benefits_home_text_two')?></p>
                     </div>
                 </div>
-                <div class="benefits__column">
+                <div class="benefits__column benefits__column_md">
                     <div class="benefits__column__inner">
                         <div class="benefits__column__circle">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="52px">
@@ -258,7 +258,7 @@
     <section class="letter" id="letter">
         <div class="wrapper">
             <div class="box">
-                <div class="column__half">
+                <div class="column__half column__half_md">
                     <div class="letter__inner">
                         <div class="letter__box">
                             <svg class="letter__box__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

@@ -16,10 +16,10 @@
                 <?php the_field('maps_contacts');?>
             </div>
             <div class="box">
-                <div class="column__half">
+                <div class="column__half column__half_md">
                     <div class="contacts__address"><?php the_field('address_contacts');?></div>
                 </div>     
-                <div class="column__half contacts_info">
+                <div class="column__half column__half_md contacts_info">
                     <?php $phone = str_replace([' ', '(', ')', '-'], '', get_field('telefon_contacts'));?>
                     <?php $viber = str_replace([' ', '(', ')', '-'], '', get_field('viber_contacts'));?>
                     <a class="contacts__link" href="tel:<?echo $phone;?>"><?php the_field('telefon_contacts')?></a>
@@ -59,7 +59,7 @@
     <section class="letter">
         <div class="wrapper">
             <div class="box">
-                <div class="column__half">
+                <div class="column__half column__half_md">
                     <div class="letter__inner">
                         <div class="letter__box">
                             <svg class="letter__box__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56px" height="61px">

@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+  /* Edit breadcrumbs link*/
   $("a[href*='shop']")
    .each(function()
    { 
@@ -11,6 +12,13 @@ $(document).ready(function() {
    .each(function()
    { 
       this.innerHTML = this.innerHTML.replace('Товары', 'Каталог');
+   });
+
+   $("a[href*='category/novosti']")
+   .each(function()
+   { 
+      this.href = this.href.replace(/category/, 
+         "");
    });
 
   $('.cart__slider').slick({
@@ -180,6 +188,10 @@ $(document).ready(function() {
 });
 /*Ajaxify header cart items count in Woocommerce*/
 $(document.body).trigger('wc_fragment_refresh');
+
+/*Input value country BY*/
+$('input[name=billing_country]').val("Беларусь");
+$("#billing_country").attr('readonly', 'readonly');
 
 /* Header fixed */
 $(function() {

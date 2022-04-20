@@ -40,7 +40,7 @@ endif;?>
             if ( $query->have_posts()) : 
                 while ( $query->have_posts() ) : $query->the_post();
                 $product_data = wc_get_product( get_the_ID() );?>
-                <div class="benefits__column benefits__column_mb">
+                <div class="benefits__column">
                     <a class="benefits__column__link" href="<?php the_permalink();?>">
                         <div class="catalog__cover" style="background-image: url(<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ) ?>);">
                             <?php if(get_field( 'installment_plan_product', $product_data->get_id()) != ""):?>

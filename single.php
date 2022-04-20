@@ -1,17 +1,26 @@
 <?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package Vibemebel
- */
-
 get_header();
 ?>
-
+<section class="breadcrumbs">
+    <div class="wrapper">
+        <?php if( function_exists('kama_breadcrumbs') ) kama_breadcrumbs(''); ?>
+    </div>
+</section>
+<section class="single">
+    <div class="wrapper">
+        <?php 
+            $attr = array(
+                'class' => "single__img",
+            );
+        ?>
+        <h2 class="section-head"><?php single_post_title(); ?></h2>
+        <div class="single__box">
+            <?php the_post_thumbnail('full', $attr);?>
+            <?php echo wpautop(the_content());?>
+        </div>
+    </div>
+</section>
 	
 
 <?php
-get_sidebar();
 get_footer();

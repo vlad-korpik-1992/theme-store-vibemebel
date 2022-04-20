@@ -252,6 +252,12 @@ function custom_override_checkout_unset_state( $fields ) {
 	return $fields;
 }
 
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_unset_country' );
+function custom_override_checkout_unset_country( $fields ) {
+	unset($fields['billing']['billing_country']);
+	return $fields;
+}
+
 add_action( 'woocommerce_after_order_notes', 'my_custom_checkout_field' );
 
 function my_custom_checkout_field( $checkout ) {

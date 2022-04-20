@@ -822,6 +822,7 @@ p.topweek__basket__title{
 }
 .breadcrumbs__list{
     display: flex;
+    flex-wrap: wrap;
 }
 .breadcrumbs__list__items{
     display: flex;
@@ -977,7 +978,7 @@ p.topweek__basket__title{
     max-width: 50%;
     padding-left: 20px;
     padding-right: 20px;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
     color: #000;
 }
 .sale__fullwidth{
@@ -1145,16 +1146,17 @@ p.about__profession{
     display: flex;
     flex-wrap: wrap;
     margin-left: -20px;
+    margin-right: -20px;
 }
 .cart__box__pic{
-    flex: 0 0 67%;
-    max-width: 67%;
+    flex: 0 0 65%;
+    max-width: 65%;
     padding-left: 20px;
     padding-right: 20px;
 }
 .cart__box__sidebar{
-    flex: 0 0 33%;
-    max-width: 33%;
+    flex: 0 0 35%;
+    max-width: 35%;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -1200,7 +1202,7 @@ p.about__profession{
     display: none !important;
 }
 .column__half .added_to_cart{
-    bottom: -70px;
+    display: none;
 }
 .cart__content_bottom{
     border: none;
@@ -1316,7 +1318,7 @@ p.about__profession{
     line-height: 75%;
 }
 .topweek__basket_bottom{
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 }
 .added_to_cart{
     position: absolute;
@@ -1339,6 +1341,7 @@ p.about__profession{
 }
 .information__box{
     display: flex;
+    flex-wrap: wrap;
     margin-left: -20px;
     margin-right: -20px;
     border-bottom: 1px solid #DADADA;
@@ -1346,7 +1349,7 @@ p.about__profession{
 }
 .information__items{
     flex: 0 0 30%;
-    max-width: 0 0 30%;
+    max-width: 30%;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -1629,6 +1632,7 @@ td.product-name a{
 }
 .checkout__box{
     display: flex;
+    flex-wrap: wrap;
     margin-left: -15px;
     margin-right: -15px;
 }
@@ -1806,4 +1810,620 @@ td.product-name a{
     padding-bottom: 20px;
     font-size: 36px;
     line-height: 75%;
+}
+.breadcrumbs__page{
+    font-size: 18px;
+}
+.woocommerce a.remove{
+    color: #1a1a1a !important;
+}
+.woocommerce-notices-wrapper{
+    display: none;
+}
+.single__img{
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+    padding-bottom: 45px;
+}
+.single__box p{
+    font-size: 16px;
+    line-height: 170%;
+    padding-bottom: 15px;
+}
+.single__box p:last-child{
+    padding-bottom: 0;
+}
+@media (max-width: 1199px){
+    .menu{
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+    .column__half_lg{
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+    .benefits__column__circle{
+        width: 100px;
+        height: 100px;
+    }
+    .benefits__column__title{
+        font-size: 26px;
+        line-height: 100%;
+        padding-bottom: 20px;
+    }
+    .topweek__title{
+        font-size: 26px;
+        line-height: 26px;
+    }
+    .topweek__price{
+        margin-top: 50px;
+        font-size: 30px;
+    }
+    .topweek__sale{
+        font-size: 70px;
+        padding-bottom: 15px;
+    }
+    .topweek__basket{
+        margin-bottom: 45px;
+    }
+    .letter__inner{
+        padding: 30px 25px;
+    }
+    .sale__box__title{
+        max-width: 100%;
+    }
+    .contacts__address{
+        line-height: 100%;
+    }
+    .contacts__social__link{
+        margin-right: 10px;
+    }
+    .contacts__social__title {
+        padding-left: 5px;
+    }
+    .cart__box__pic{
+        flex: 0 0 55%;
+        max-width: 55%;
+    }
+    .cart__box__sidebar {
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+    .breadcrumbs__list__items{
+        padding-right: 15px;
+    }
+    .breadcrumbs__list__link{
+        padding-right: 15px;
+    }
+    .added_to_cart{
+        bottom: 146px;
+    }
+}
+@media (max-width: 991px){
+    .wrapper{
+        width: 100%;
+    }
+    .menu {
+        flex: 0 0 80%;
+        max-width: 80%;
+    }
+    .menu__list__link{
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .box{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .column__half{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .category__box__circle{
+        flex: 0 0 85px;
+        max-width: 85px;
+        height: 85px;
+    }
+    .category__box__title{
+        font-size: 17px;
+        line-height: 20px;
+        padding-bottom: 15px;
+    }
+    .column__half_md{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .column__half_md .category__inner_first{
+        padding-top: 50%;
+    }
+    .benefits-box{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .benefits__column{
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .benefits__column:first-child{
+        padding-bottom: 30px;
+    }
+    .benefits__column_md{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .topweek__price{
+        margin-top: 35px;
+        font-size: 26px;
+    }
+    .topweek__sale{
+        font-size: 55px;
+    }
+    .topweek__basket{
+        margin-bottom: 30px;
+        height: 71px;
+    }
+    .topweek__discount{
+        padding: 15px 0 15px 20px;
+    }
+    .letter__column{
+        display: none;
+    }
+    .footer__menu__list{
+        max-width: 100%;
+    }
+    .catalog__column_mb{
+        margin-bottom: 8px;
+    }
+    .catalog__column_mb:first-child{
+        padding-bottom: 0;
+        margin-bottom: 8px;
+    }
+    .sale__box{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .sale__box__column{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .information__box{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .information__items{
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .information__items_content{
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+    .news__box{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .news__box__pic{
+        flex: 0 0 40%;
+        max-width: 40%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .news__box__content{
+        flex: 0 0 60%;
+        max-width: 60%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .contacts__social{
+        padding-top: 30px;
+    }
+    .contacts__address{
+        max-width: 576px;
+    }
+    .about_desc p{
+        font-size: 24px;
+        line-height: 34px;
+        padding-bottom: 30px;
+    }
+    .cart__box{
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .cart__box__pic{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 30px;
+    }
+    .cart__box__sidebar{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .cart__content__box{
+        align-items: center;
+    }
+    .woocommerce-thankyou-order-received{
+        font-size: 40px;
+    }
+    .added_to_cart{
+        bottom: 158px;
+        left: 15px;
+        right: 15px;
+    }
+    .single__img{
+        height: auto;
+    }
+}
+@media (max-width: 767px){
+    .header__box{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .header__logo{
+        padding-top: 15px;
+    }
+    .menu{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-top: 20px;
+    }
+    .hero__box__circle{
+        width: 180px;
+        height: 180px;
+    }
+    .hero__box_price{
+        font-size: 30px;
+    }
+    .header__basket{
+        position: absolute;
+        top: -55px;
+        right: 15px;
+    }
+    .column__half{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-bottom: 30px;
+    }
+    .column__half:last-child{
+        padding-bottom: 0;
+    }
+    .category__inner{
+        padding-top: 310px;
+        margin-bottom: 40px;
+    }
+    .column__half_md .category__inner_first{
+        padding-top: 310px;
+    }
+    .category__box{
+        padding-top: 0;
+    }
+    .category__box_xlmb{
+        margin-bottom: 40px;
+    }
+    .section-head{
+        font-size: 35px;
+    }
+    .benefits__column{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-bottom: 30px;
+    }
+    .benefits__column:last-child{
+        padding-bottom: 0;
+    }
+    .topweek__title{
+        font-size: 36px;
+        line-height: 36px;
+    }
+    .topweek__price{
+        margin-top: 59px;
+        font-size: 36px;
+    }
+    .topweek__sale{
+        font-size: 100px;
+        padding-bottom: 15px;
+    }
+    .topweek__basket{
+        height: 79px;
+        margin-bottom: 60px;
+    }
+    .topweek__discount{
+        padding: 26px 0 26px 20px;
+    }
+    .catalog__cover{
+        padding-top: 100%;
+    }
+    .letter__inner{
+        padding: 30px 15px;
+    }
+    .info__box{
+        align-items: flex-start;
+    }
+    .sale__box__img, .sale__fullwidth__img{
+        height: auto;
+    }
+    .sale__box__column{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .sale__box__title{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .information__items{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-bottom: 15px;
+    }
+    .information__items_content{
+        padding-bottom: 0;
+    }
+    .information__box{
+        padding: 25px 0;
+    }
+    .news__box__pic{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-bottom: 15px;
+    }
+    .news__box__content{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .column__half_bottom{
+        margin-bottom: 0;
+    }
+    .about__img{
+        height: auto;
+    }
+    .directory__btn{
+        margin-top: 15px;
+    }
+    table.cart .product-thumbnail{
+        display: block !important;
+    }
+    .woocommerce table.shop_table_responsive tr td{
+        text-align: left !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .woocommerce table.shop_table_responsive tr td.product-quantity .quantity{
+        width: 50%;
+        text-align: right;
+    }
+    .quantity > input[type="number"]{
+        width: 30% !important;
+        font-size: 14px;
+        padding: 2px 5px;
+    }
+    .woocommerce table.shop_table_responsive tr td.product-thumbnail::before{
+        content: "";
+    }
+    .woocommerce table.shop_table_responsive tbody tr td.product-remove{
+        border-top: 0;
+        position: absolute;
+        right: 0;
+        padding: 5px 20px 0 0;
+    }
+    .woocommerce table.shop_table_responsive tbody tr td.product-name a{
+        text-align: right;
+    }
+    .woocommerce table.shop_table_responsive tr:nth-child(2n) td{
+        background-color: transparent;
+    }
+    .woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals{
+        box-shadow: 0 0 15px 0 rgb(0 0 0 / 20%);
+    }
+    .woocommerce a.button.alt{
+        width: 100%;
+    }
+    .woocommerce-thankyou-order-received{
+        line-height: 120%;
+    }
+    .checkout__column{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-bottom: 30px;
+    }
+    .checkout__column:last-child{
+        padding-bottom: 0;
+    }
+    .place-order #place_order{
+        padding: 1.5rem 5px !important;
+    }
+    .woocommerce ul.order_details li{
+        padding-bottom: 15px;
+    }
+    .single__img{
+        padding-bottom: 30px;
+    }
+}
+@media (max-width: 575px){
+    .menu__list{
+        overflow-x: scroll;
+        max-width: 576px;
+    }
+    .hero__box__circle_center {
+        top: 200px;
+    }
+    .hero__box__circle_bottom {
+        top: 350px;
+    }
+    .hero__bottom{
+        right: 15px;
+        left: 15px;
+    }
+    .hero__link{
+        width: 100%;
+        max-width: 100%;
+    }
+    .category__inner{
+        padding-top: 100%;
+    }
+    .column__half_md .category__inner_first{
+        padding-top: 100%;
+    }
+    .category .column__half{
+        padding-bottom: 0;
+    }
+    .section-head{
+        line-height: 100%;
+    }
+    .footer__menu__list{
+        overflow-x: scroll;
+        max-width: 576px;
+        padding-bottom: 18px;
+    }
+    .menu__list__items{
+        padding-right: 25px;
+        white-space: nowrap;
+    }
+    .menu__list::-webkit-scrollbar, .footer__menu__list::-webkit-scrollbar{
+        height: 7px;
+        width: 7px;
+        background: #000;
+    }
+    
+    .menu__list::-webkit-scrollbar-thumb:horizontal, .footer__menu__list::-webkit-scrollbar-thumb:horizontal{
+        background: #009b4a;
+    }
+    .menu__list__link{
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .category__application{
+        padding: 50px 15px;
+    }
+    .category__application__btn{
+        max-width: 100%;
+    }
+    .hero__box__items{
+        flex: 0 0 100%;
+        max-width: 100%;
+        justify-content: center;
+    }
+    .hero__box__items:first-child {
+        justify-content: flex-start;
+    }
+    .hero__box__items:last-child{
+        justify-content: flex-end;
+    }
+    .catalog__column_mb{
+        margin-bottom: 8px;
+        padding-bottom: 0;
+    }
+    .catalog__column_mb:first-child{
+        padding-bottom: 0;
+    }
+    .info__box{
+        flex-wrap: wrap;
+    }
+    .info__box__text{
+        padding-left: 0;
+        padding-top: 15px;
+    }
+    .benefits__column_mb{
+        margin-bottom: 0;
+    }
+    .breadcrumbs__list__link{
+        padding-right: 15px;
+    }
+    .breadcrumbs__list__items{
+        padding-right: 15px;
+    }
+    .news__box__data{
+        font-size: 50px;
+    }
+    .contacts__social__link{
+        margin-right: 30px;
+    }
+    .contacts__social__title{
+        display: none;
+    }
+    .bgimg{
+        display: none;
+    }
+    .about_desc p {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .cart__slider__img{
+        height: 425px;
+    }
+    .breadcrumbs__list__items{
+        padding-bottom: 10px;
+    }
+    .breadcrumbs__list__link{
+        font-size: 16px;
+    }
+    .breadcrumbs__page{
+        font-size: 16px;
+    }
+    .woocommerce-thankyou-order-received{
+        font-size: 30px;
+    }
+    .thankyou__box__link{
+        padding: 20px 10px;
+    }
+    .added_to_cart{
+        bottom: 158px;
+        left: 15px;
+        right: 15px;
+    }
+    .woocommerce .woocommerce-customer-details, .woocommerce .woocommerce-order-details, .woocommerce .woocommerce-order-downloads{
+        padding: 20px 5px;
+    }
+    .woocommerce-order-details__title{
+        font-size: 24px;
+    }
+}
+@media (max-width: 424px){
+    .topweek__title{
+        font-size: 28px;
+        line-height: 28px;
+    }
+    .section-head{
+        font-size: 33px;
+    }
+    .category__application__title{
+        font-size: 22px;
+        line-height: 26px;
+    }
+    .cart__slider__img{
+        height: 375px;
+    }
+}
+@media (max-width: 374px){
+    .letter__title{
+        font-size: 22px;
+        line-height: 22px;
+    }
+    .news__box__data {
+        font-size: 38px;
+    }
+    .cart__slider__img{
+        height: 320px;
+    }
+    .cart__content__phone p{
+        font-size: 24px;
+    }
+    .cart__content small{
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .contacts_info{
+        padding-top: 30px;
+    }
 }
