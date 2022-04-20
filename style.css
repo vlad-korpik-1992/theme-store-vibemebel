@@ -1834,6 +1834,45 @@ td.product-name a{
 .single__box p:last-child{
     padding-bottom: 0;
 }
+.error-page__inner{
+	display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.error-page__title{
+	margin: 0;
+	font-size: 100px;
+    font-weight: 700;
+    margin-bottom: 80px;
+}
+.error-page__subtitle{
+    font-size: 20px;
+    line-height: 35px;
+    font-weight: 500;
+    padding-bottom: 40px;
+}
+.error-page__link{
+	display: flex;
+    justify-content: center;
+    flex: 0 0 50%;
+    max-width: 375px;
+	min-width: 375px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 18px;
+    padding: 26px 0;
+    cursor: pointer;
+    transition: 0.3s all;
+    color: #fff;
+    background-color: #ae5a4d;
+    transition: all ease-in-out 0.3s;
+}
+.error-page__link:hover{
+	-webkit-transform: translateY(-0.25em);
+    transform: translateY(-0.25em);
+}
 @media (max-width: 1199px){
     .menu{
         flex: 0 0 75%;
