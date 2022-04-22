@@ -69,7 +69,7 @@ get_header();?>
                         <?php endif;?>
                     </div>                    
                     <div class="cart__content">
-                        <?php if($product->get_regular_price() != ''):?>
+                        <?php if($product->get_sale_price() != ''):?>
                             <p class="topweek__price"><?php echo $product->get_regular_price(); ?><span> BYN</span></p>
                         <?php endif;?>
                         <div class="cart__price"><?php echo $product->get_price(); ?><span>BYN</span></div>
@@ -158,23 +158,23 @@ if($array_id != []):?>
     <div class="popup__body">
         <div class="popup__content">
             <div class="popup__header">
-                <button class="popup__header_close">X</button>
+                <button class="popup__header_close">
+                    <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                        <path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z"></path>
+					</svg>
+                </button>
                 <div class="popup__title">Индивидуальный просчет</div>
             </div>
             <div class="popup__text">
                 <form class="ajax__form" method="post" id="ajax__form">
                     <input type="hidden" name="productName" id="productName" value="<?php the_title();?>">
                     <div class="form__group">
-                        <div class="form__label">Ваше имя*</div>
-                        <input type="text" class="form__group_text" required="required" id="modalname" name="modalname" value="">
+                        <input type="text" class="form__group_text" required="required" id="modalname" name="modalname" value="" placeholder="Ваше имя*">
                     </div>
                     <div class="form__group">
-                        <div class="form__label">Номер телефона*</div>
-                        <input type="text" class="form__group_text" required="required" id="modalphone" name="modalphone" value="">
+                        <input type="text" class="form__group_text" required="required" id="modalphone" name="modalphone" value="" placeholder="Номер телефона*">
                     </div>
-                    <div class="form__group">
-                        <div class="letter__form__error letter__form__error_mt error" id="status__error"></div>
-                    </div>
+                    <div class="letter__form__error letter__form__error_mt error" id="status__error"></div>
                     <div class="form__group">
                         <button id="product-send" class="form__btn" type="submit">Отправить</button>
                     </div>

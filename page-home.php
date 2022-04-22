@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="hero__bottom">
-                <a class="hero__link" href="#">Перейти в каталог</a>
+                <a class="hero__link" href="<?php echo get_page_link(132)?>">Перейти в каталог</a>
             </div>
         </div>
     </section>

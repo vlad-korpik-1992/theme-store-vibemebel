@@ -96,7 +96,7 @@
             </div>
             <div class="column__half directory_content">
                 <? the_field('text_right_catalog')?>
-                <a class="directory__btn" href="#">Перейти в каталог</a>
+                <a class="directory__btn" href="<?php echo get_page_link(132)?>">Перейти в каталог</a>
             </div>
         </div>
     </div>
