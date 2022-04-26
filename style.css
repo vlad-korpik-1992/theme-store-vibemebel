@@ -278,7 +278,7 @@ section{
     position: absolute;
     left: 0;
     width: 0;
-    height: 2px;
+    height: 1px;
     background-color: #008000;
     content: "";
     transition: width 0.3s ease-out;
@@ -1513,7 +1513,8 @@ a.rds_hl_nofollow{
     transition: 0.3s all;
     padding: 15px 30px !important;
     margin-top: 30px;
-    font-weight: 400;
+    font-weight: 100;
+    font-family: 'Golos Text' !important;
 }
 .woocommerce button.button:disabled:hover, .woocommerce button.button:disabled[disabled]:hover{
     background-color: #009b4a;
@@ -1615,8 +1616,9 @@ td.product-name a{
     margin-top: 15px;
     background-color: #009b4a !important;
     font-size: 16px !important;
-    font-weight: 400 !important;
+    font-weight: 100 !important;
     padding: 15px 30px !important;
+    font-family: 'Golos Text' !important;
 }
 #add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment{
     background-color: #fff;
