@@ -12,6 +12,24 @@ get_header();?>
             <div class="cart__box">
                 <div class="cart__box__pic">
                     <h1 class="cart__box__title"><?php the_title(); ?></h1>
+                </div>
+                <div class="cart__box__sidebar">
+                    <div class="cart__content cart__content_bottom cart__content_desctop">
+                        <?php $phone = str_replace([' ', '(', ')', '-'], '', get_field('telefon_contacts', 39));?>
+                        <a class="cart__content__link" href="tel:<?echo $phone;?>">
+                            <svg class="cart__content__link__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <image  x="0px" y="0px" width="28px" height="28px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAQAAADYBBcfAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfmAxkLMS5wptVmAAABsklEQVQ4y43TPWtUURDG8Z9JCIqsJGBjIRgwRIySBGF9w167YOnbB1CwsrWUZIuFxGwlIlZiZSWIkiCx0A+goFu4IviKRsEVwmqSY7E34Z6797o709yZ4X/nnOfM9Nu0E5bt8kxsv100bY9vVuRaWVOw7lQmH7Z80ZFObNxKUq7bEVV2GjPtjh+CDTcNpIvDGqk/z+SeaMiMVcGioc1Un0cpLPhjLP82prwXLBtsh1cjLAgeROK8MudQEu31UTDfDr52gMFERpw1taRP2ap1U/AuB7yQEueoBS3BUoJWBE/gfgd2S3/mdpM+CBYSmX4KRjmfwWYLhGlZcxDcFVyjpJnC6oqsJqiCs4LHMB913F8AHhe8BAcEr2FEKwXWCsCS4FfmSyUF/nVYz1byKYUu6esdPW2jq7IFVo0kutw7OOh5hFaiAw+4ZLII3a0eoU+Nb9VuJ+NfsDkjPmdWrGYUN1Kaz9qeh05k0PY0xfEbJ/O71jvQrK+7nn/XF13Rt0UKV6N3zXrTseLnORNNU9q/K///ZUsq0fi3vZFsZRfbZy7a14eGe5undudz7mn44optm8l/v3k7sYf6YEkAAAAASUVORK5CYII=" />
+                            </svg>
+                            <div class="cart__content__phone">
+                                <p><?php the_field('telefon_contacts', 39)?></p>
+                                <small><?php the_field('clock_contacts', 39)?></small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="cart__box">
+                <div class="cart__box__pic">
                     <?php $gallery = $product->get_gallery_attachment_ids();?>
                     <div class="cart__slider">
                         <?php foreach( $gallery as $image ) :
@@ -36,7 +54,7 @@ get_header();?>
                     </div> 
                 </div>
                 <div class="cart__box__sidebar">
-                    <div class="cart__content cart__content_bottom">
+                    <div class="cart__content cart__content_bottom cart__content_mobile">
                         <?php $phone = str_replace([' ', '(', ')', '-'], '', get_field('telefon_contacts', 39));?>
                         <a class="cart__content__link" href="tel:<?echo $phone;?>">
                             <svg class="cart__content__link__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
