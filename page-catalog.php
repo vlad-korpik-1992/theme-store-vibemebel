@@ -11,14 +11,23 @@
     </section>
     <section class="catalog">
         <div class="wrapper">
+            <?php
+                $categories = get_categories( [
+                'taxonomy'     => 'product_cat',
+                'orderby'      => 'name',
+                'order'        => 'ASC'
+            ]);?>
             <h2 class="section-head"><?php single_post_title(); ?></h2>
+            <div class="buttons__box">
+                <?php
+                    foreach ($categories as $category):?>
+                        <a class="buttons__box__items" href="#"><?php echo $category->cat_name;?></a>
+                    <?endforeach;
+                    wp_reset_postdata();
+                ?>
+            </div>
             <div class="benefits-box">
                 <?php
-                    $categories = get_categories( [
-                    'taxonomy'     => 'product_cat',
-                    'orderby'      => 'name',
-                    'order'        => 'ASC'
-                ]);
                 foreach ($categories as $category):
                     $thumbnail_id = get_term_meta( $category->term_id, 'thumbnail_id', true ); 
                     $image = wp_get_attachment_url( $thumbnail_id );?>

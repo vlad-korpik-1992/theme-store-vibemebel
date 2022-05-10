@@ -146,7 +146,7 @@
             </div>
             <h2 class="section-head">Почему стоит заказать у нас?</h2>
             <div class="benefits-box">
-                <div class="benefits__column">
+                <div class="privilege__column">
                     <div class="benefits__column__inner">
                         <div class="benefits__column__circle">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="52px">
@@ -157,7 +157,7 @@
                         <p class="benefits__column__text"><?php the_field('benefits_home_text_one')?></p>
                     </div>
                 </div>
-                <div class="benefits__column">
+                <div class="privilege__column">
                     <div class="benefits__column__inner">
                         <div class="benefits__column__circle">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="52px">
@@ -168,7 +168,7 @@
                         <p class="benefits__column__text"><?php the_field('benefits_home_text_two')?></p>
                     </div>
                 </div>
-                <div class="benefits__column benefits__column_md">
+                <div class="privilege__column benefits__column_md">
                     <div class="benefits__column__inner">
                         <div class="benefits__column__circle">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="52px">
