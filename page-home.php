@@ -185,6 +185,9 @@
     <section class="topweek">
         <div class="wrapper">
             <h2 class="section-head">Товар недели</h2>
+            <?php  
+	            $checkout_url = WC()->cart->get_checkout_url();
+            ?>
             <?$args = array(
                 'post_type' => 'product'
             );
@@ -210,6 +213,7 @@
                                         </svg>
                                         <p class="topweek__basket__title">В корзину</p>
                                     </a>
+                                    <a class="buy-now" href="<?echo $checkout_url;?>?add-to-cart=<?echo get_the_ID();?>">Оформить заказ</a>
                                     <div class="topweek__discount"><?the_field( 'condition_product_week_home', $product->get_id())?></div>
                                 </div>
                             </div>

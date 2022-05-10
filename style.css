@@ -604,14 +604,32 @@ section{
     background-color: #009b4a;
     width: 235px;
     max-width: 235px;
-    height: 70px;
+    padding: 7px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     transition: 0.3s all;
 }
 .topweek__basket:hover{
+    cursor: pointer;
+    background-color: #000;
+}
+.buy-now{
+    background-color: #ae5a4d;
+    width: 235px;
+    max-width: 235px;
+    padding: 26px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    transition: 0.3s all;
+    font-size: 24px;
+    line-height: 36px;
+    color: #fff;
+}
+.buy-now:hover{
     cursor: pointer;
     background-color: #000;
 }
