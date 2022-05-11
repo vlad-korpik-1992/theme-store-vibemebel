@@ -258,6 +258,18 @@ function custom_override_checkout_unset_country( $fields ) {
 	return $fields;
 }
 
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_unset_email' );
+function custom_override_checkout_unset_email( $fields ) {
+	unset($fields['billing']['billing_email']);
+	return $fields;
+}
+
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_unset_postcode' );
+function custom_override_checkout_unset_postcode( $fields ) {
+	unset($fields['billing']['billing_postcode']);
+	return $fields;
+}
+
 add_action( 'woocommerce_after_order_notes', 'my_custom_checkout_field' );
 
 function my_custom_checkout_field( $checkout ) {
@@ -273,6 +285,18 @@ function my_custom_checkout_field( $checkout ) {
 
     echo '</div>';
 
+	echo '<div id="my_field_region"><h2>' . __('') . '</h2>';
+
+    woocommerce_form_field( 'my_field_region', array(
+        'type'          => 'text',
+		'required'		=> true,
+        'class'         => array('my-field-class form-row-wide'),
+        'label'         => __('Область'),
+        'placeholder'   => __('Укажите область'),
+        ), $checkout->get_value( 'my_field_region' ));
+
+    echo '</div>';
+
 }
 
 add_action( 'woocommerce_checkout_update_order_meta', 'my_custom_checkout_field_update_order_meta' );
@@ -281,12 +305,23 @@ function my_custom_checkout_field_update_order_meta( $order_id ) {
     if ( ! empty( $_POST['my_field_furniture_color'] ) ) {
         update_post_meta( $order_id, 'Цвет мебели', sanitize_text_field( $_POST['my_field_furniture_color'] ) );
     }
+	if ( ! empty( $_POST['my_field_region'] ) ) {
+        update_post_meta( $order_id, 'Область', sanitize_text_field( $_POST['my_field_region'] ) );
+    }
 }
 
 add_action( 'woocommerce_admin_order_data_after_billing_address', 'my_custom_checkout_field_display_admin_order_meta', 10, 1 );
 
 function my_custom_checkout_field_display_admin_order_meta($order){
     echo '<p><strong>'.__('Цвет мебели').':</strong> ' . get_post_meta( $order->id, 'Цвет мебели', true ) . '</p>';
+	echo '<p><strong>'.__('Область').':</strong> ' . get_post_meta( $order->id, 'Область', true ) . '</p>';
+}
+/**/
+
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+function custom_override_checkout_fields( $fields ) {
+     $fields["billing"]["billing_address_1"]['label'] = 'Город';
+     return $fields;
 }
 
 /* change the order of the fields on the checkout page */
@@ -295,11 +330,9 @@ function sort_fields_billing($fields) {
 
 	$fields["billing"]["billing_first_name"]["priority"] = 1;
 	$fields["billing"]["billing_last_name"]["priority"] = 2;
-	$fields["billing"]["billing_email"]["priority"] = 3;
-	$fields["billing"]["billing_phone"]["priority"] = 4;
-	$fields["billing"]["billing_country"]["priority"] = 5;
-	$fields["billing"]["billing_address_1"]["priority"] = 6;
-	$fields["billing"]["billing_postcode"]["priority"] = 7;
+	$fields["billing"]["billing_phone"]["priority"] = 3;
+	$fields["billing"]["billing_country"]["priority"] = 4;
+	$fields["billing"]["billing_address_1"]["priority"] = 5;
 	
 	return $fields;
 	
