@@ -56,7 +56,7 @@
     ?>
     <section class="category">
         <div class="wrapper">
-            <h2 class="section-head">Каталог</h2>
+            <a class="section-head" href="<?php echo get_page_link(132)?>">Каталог</a>
             <div class="box">
                 <?  
                     $count_category = 0;
@@ -146,7 +146,7 @@
             </div>
             <h2 class="section-head">Почему стоит заказать у нас?</h2>
             <div class="benefits-box">
-                <div class="privilege__column">
+                <a class="privilege__column" href="<?php echo get_page_link(152)?>">
                     <div class="benefits__column__inner">
                         <div class="benefits__column__circle">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="52px">
@@ -156,8 +156,8 @@
                         <h3 class="benefits__column__title"><?php the_field('benefits_home_title_one')?></h3>
                         <p class="benefits__column__text"><?php the_field('benefits_home_text_one')?></p>
                     </div>
-                </div>
-                <div class="privilege__column">
+                </a>
+                <a class="privilege__column" href="<?php echo get_page_link(152)?>">
                     <div class="benefits__column__inner">
                         <div class="benefits__column__circle">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="52px">
@@ -167,8 +167,8 @@
                         <h3 class="benefits__column__title"><?php the_field('benefits_home_title_two')?></h3>
                         <p class="benefits__column__text"><?php the_field('benefits_home_text_two')?></p>
                     </div>
-                </div>
-                <div class="privilege__column benefits__column_md">
+                </a>
+                <a class="privilege__column benefits__column_md" href="<?php echo get_page_link(48)?>">
                     <div class="benefits__column__inner">
                         <div class="benefits__column__circle">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="52px">
@@ -178,7 +178,7 @@
                         <h3 class="benefits__column__title"><?php the_field('benefits_home_title_three')?></h3>
                         <p class="benefits__column__text"><?php the_field('benefits_home_text_three')?></p>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -293,7 +293,7 @@
     </section>
     <section class="reviews">
         <div class="wrapper">
-            <h2 class="section-head">Реальные отзывы</h2>
+            <a class="section-head" href="<?php echo get_page_link(99)?>">Реальные отзывы</a>
             <div class="box">
                 <?$reviews = get_field('feedback', 99);
                 $col_reviews = 0;

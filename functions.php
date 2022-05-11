@@ -157,6 +157,18 @@ function vibemebel_scripts() {
 
     wp_enqueue_script( 'slick-script' );
 
+	if ( is_page_template('page-feedback.php')) {
+
+        wp_register_script( 'magnific-script', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js', array(), null, true );
+
+        wp_enqueue_script( 'magnific-script' );
+
+		wp_register_script( 'mainpopup-script', get_template_directory_uri() . '/assets/js/main-popup.js', array(), null, true );
+
+        wp_enqueue_script( 'mainpopup-script' );
+
+    }
+
 	wp_register_script( 'main-script', get_template_directory_uri() . '/assets/js/main.js', array(), null, true );
 
     wp_enqueue_script( 'main-script' );
