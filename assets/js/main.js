@@ -139,11 +139,16 @@ $(document).ready(function() {
           return false;
       }
     }
+    x =  document.getElementById('messages').value;
+      if (x === "") {
+        document.getElementById('status__error').textContent = "Вы не указали товар который Вас интересует";
+        return false;
+    }
     $('#status__error').removeClass("error");
     document.getElementById('status__error').textContent = "Отправка...";
 
     const formProductData = {
-      'productName': $('input[name=productName]').val(),
+      'productName': $('textarea[name=letter]').val(),
       'firstname': $('input[name=modalname]').val(),
       'phone': $('input[name=modalphone]').val(),
     };
@@ -185,20 +190,9 @@ $(document).ready(function() {
             return false;
         }
     }
-    x =  document.getElementById('email').value;
-    if (x === "") {
-      document.getElementById('status_form').textContent = "Укажите Ваш E-mail";
-      return false;
-    } else {
-        let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        if(!re.test(x)){
-            document.getElementById('status_form').textContent = "Некорректный E-mail";
-            return false;
-        }
-    }
     x =  document.getElementById('messages').value;
       if (x === "") {
-        document.getElementById('status_form').textContent = "Вы не написали сообщение";
+        document.getElementById('status_form').textContent = "Вы не указали товар который Вас интересует";
         return false;
     }
 
@@ -208,7 +202,6 @@ $(document).ready(function() {
     const formData = {
         'firstname': $('input[name=firstname]').val(),
         'phone': $('input[name=phone]').val(),
-        'email': $('input[name=email]').val(),
         'letter': $('textarea[name=letter]').val(),
     };
 

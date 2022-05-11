@@ -273,8 +273,7 @@
                         <form class="letter__form" method="post" id="letter__form" action="#">
                             <input class="letter__input" name="firstname" id="firstname" type="text" placeholder="Имя и Фамилия">
                             <input class="letter__input" name="phone" id="phone" type="text" placeholder="Номер телефона">
-                            <input class="letter__input" name="email" id="email" type="email" placeholder="Email">
-                            <textarea class="letter__textarea" name="letter" id="messages" type="text" cols="30" rows="10" placeholder="Текстовое сообщение"></textarea>
+                            <textarea class="letter__textarea" name="letter" id="messages" type="text" cols="30" rows="10" placeholder="Какой товар интересует?"></textarea>
                             <button class="letter__btn" id="ajax-send" type="send">Отправить</button>
                             <div class="letter__form__error error" id="status_form"></div>
                         </form>

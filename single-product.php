@@ -189,12 +189,14 @@ if($array_id != []):?>
             </div>
             <div class="popup__text">
                 <form class="ajax__form" method="post" id="ajax__form">
-                    <input type="hidden" name="productName" id="productName" value="<?php the_title();?>">
                     <div class="form__group">
                         <input type="text" class="form__group_text" required="required" id="modalname" name="modalname" value="" placeholder="Ваше имя*">
                     </div>
                     <div class="form__group">
                         <input type="text" class="form__group_text" required="required" id="modalphone" name="modalphone" value="" placeholder="Номер телефона*">
+                    </div>
+                    <div class="form__group">
+                        <textarea class="form__group_textarea" name="letter" id="messages" type="text" cols="80" rows="10" placeholder="Какой товар интересует?"></textarea>
                     </div>
                     <div class="letter__form__error letter__form__error_mt error" id="status__error"></div>
                     <div class="form__group">

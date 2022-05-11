@@ -297,6 +297,30 @@ function my_custom_checkout_field( $checkout ) {
 
     echo '</div>';
 
+	echo '<div id="my_field_street"><h2>' . __('') . '</h2>';
+
+    woocommerce_form_field( 'my_field_street', array(
+        'type'          => 'text',
+		'required'		=> true,
+        'class'         => array('my-field-class form-row-wide'),
+        'label'         => __('Улица'),
+        'placeholder'   => __('Укажите улицу'),
+        ), $checkout->get_value( 'my_field_street' ));
+
+    echo '</div>';
+
+	echo '<div id="my_field_room"><h2>' . __('') . '</h2>';
+
+    woocommerce_form_field( 'my_field_room', array(
+        'type'          => 'text',
+		'required'		=> true,
+        'class'         => array('my-field-class form-row-wide'),
+        'label'         => __('Квартира'),
+        'placeholder'   => __('Укажите квартиру'),
+        ), $checkout->get_value( 'my_field_room' ));
+
+    echo '</div>';
+
 }
 
 add_action( 'woocommerce_checkout_update_order_meta', 'my_custom_checkout_field_update_order_meta' );
@@ -308,6 +332,12 @@ function my_custom_checkout_field_update_order_meta( $order_id ) {
 	if ( ! empty( $_POST['my_field_region'] ) ) {
         update_post_meta( $order_id, 'Область', sanitize_text_field( $_POST['my_field_region'] ) );
     }
+	if ( ! empty( $_POST['my_field_street'] ) ) {
+        update_post_meta( $order_id, 'Улица', sanitize_text_field( $_POST['my_field_street'] ) );
+    }
+	if ( ! empty( $_POST['my_field_room'] ) ) {
+        update_post_meta( $order_id, 'Квартира', sanitize_text_field( $_POST['my_field_room'] ) );
+    }
 }
 
 add_action( 'woocommerce_admin_order_data_after_billing_address', 'my_custom_checkout_field_display_admin_order_meta', 10, 1 );
@@ -315,6 +345,8 @@ add_action( 'woocommerce_admin_order_data_after_billing_address', 'my_custom_che
 function my_custom_checkout_field_display_admin_order_meta($order){
     echo '<p><strong>'.__('Цвет мебели').':</strong> ' . get_post_meta( $order->id, 'Цвет мебели', true ) . '</p>';
 	echo '<p><strong>'.__('Область').':</strong> ' . get_post_meta( $order->id, 'Область', true ) . '</p>';
+	echo '<p><strong>'.__('Улица').':</strong> ' . get_post_meta( $order->id, 'Улица', true ) . '</p>';
+	echo '<p><strong>'.__('Квартира').':</strong> ' . get_post_meta( $order->id, 'Квартира', true ) . '</p>';
 }
 /**/
 

@@ -19,7 +19,7 @@
     <h2>Заявка индивидуального просчет мебели</h2>
     <b>Имя:</b> $name<br>
     <b>Телефон:</b> $phone<br>
-    <b>Модель:</b> $productName
+    <b>Интересует следующий товар:</b> $productName
     ");
     $mail->addAddress('v.korpik2010@yandex.by');
     $mail->send();
