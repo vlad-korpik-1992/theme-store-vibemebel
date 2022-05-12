@@ -12,6 +12,9 @@
                     <a class="menu__list__link" href="<?php echo get_page_link(152)?>">Доставка и оплтата</a>
                 </li>
                 <li class="menu__list__items">
+                        <a class="menu__list__link" href="<?php echo get_page_link(200)?>">Сотрудничество</a>
+                    </li>
+                <li class="menu__list__items">
                     <a class="menu__list__link" href="<?php echo get_page_link(15)?>">Блог</a>
                 </li>
                 <li class="menu__list__items">

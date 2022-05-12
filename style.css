@@ -597,8 +597,8 @@ section{
 }
 .menu{
     position: relative;
-    flex: 0 0 63%;
-    max-width: 63%;
+    flex: 0 0 70%;
+    max-width: 70%;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 30px;
@@ -1770,13 +1770,13 @@ p.about__profession{
     padding-left: 20px;
     padding-right: 20px;
 }
-.information__title{
-    font-size: 18px;
-}
-.information__text{
+.information__items_content p {
     font-size: 16px;
     line-height: 170%;
     padding-bottom: 30px;
+}
+.information__title{
+    font-size: 18px;
 }
 .feeadback__box{
     display: flex;
@@ -2372,6 +2372,58 @@ td.product-name a{
     width: 100%;
     height: 300px;
 }
+.information__contacts{
+    padding: 10px 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.information__contacts__items{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.information__footer{
+    display: flex;
+    justify-content: flex-end;
+}
+.information__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #009b4a;
+    padding: 15px 30px;
+    border-radius: 3px;
+    max-width: 280px;
+    transition: 0.3s all;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 75%;
+    font-weight: 100;
+}
+.information__contacts__text{
+    font-style: normal;
+    font-size: 16px;
+    line-height: 170%;
+}
+.information__contacts__link{
+    font-size: 16px;
+    line-height: 170%;
+    text-decoration: underline;
+}
+.information__btn:hover{
+    background-color: #ae5a4d;
+}
+.information__svg{
+    height: 30px;
+    width: 30px;
+    fill: #fff;
+    margin-right: 15px;
+}
 @media (min-width: 992px){
     .cart__content_desctop{
         display: block;
@@ -2382,8 +2434,8 @@ td.product-name a{
 }
 @media (max-width: 1199px){
     .menu{
-        flex: 0 0 75%;
-        max-width: 75%;
+        flex: 0 0 80%;
+        max-width: 80%;
     }
     .column__half_lg{
         flex: 0 0 100%;
@@ -2463,8 +2515,8 @@ td.product-name a{
         width: 100%;
     }
     .menu {
-        flex: 0 0 80%;
-        max-width: 80%;
+        flex: 0 0 85%;
+        max-width: 85%;
     }
     .menu__list__link{
         font-size: 14px;
@@ -2977,6 +3029,14 @@ td.product-name a{
     }
     .feeadback__images__col__image{
         height: 250px;
+    }
+    .information__contacts__items{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-bottom: 5px;
+    }
+    .information__contacts__items:last-child{
+        padding-bottom: 0;
     }
 }
 @media (max-width: 424px){
