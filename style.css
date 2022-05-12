@@ -997,7 +997,7 @@ section{
 }
 .cart__content__phone p{
     font-size: 30px;
-    line-height: 75%;
+    line-height: 100%;
 }
 .cart__content__btn p{
     font-size: 13px;
@@ -1617,16 +1617,17 @@ p.about__profession{
 }
 .cart__content_bottom{
     border: none;
-    padding-bottom: 45px;
     margin-bottom: 0;
 }
 .cart__content__link__icon{
     flex: 0 0 28px;
     max-width: 28px;
-    height: 28px;
+    height: 33px;
+    padding-top: 5px;
 }
 .cart__content__link{
     display: flex;
+    align-items: flex-start;
     color: #000;
 }
 .cart__content__phone{
