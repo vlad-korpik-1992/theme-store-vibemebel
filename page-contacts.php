@@ -62,7 +62,7 @@
                 <div class="column__half column__half_md">
                     <div class="letter__inner">
                         <div class="letter__box">
-                            <svg class="letter__box__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56px" height="61px">
+                            <svg class="letter__box__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <image  x="0px" y="0px" width="56px" height="61px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA9CAQAAABSQmImAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfmAxYPEhvH1t6uAAAD80lEQVRYw+3YW4hVdRTH8c+MozOaVk6FYkNiYVnRhYQkjYoeGojItCEsx/GSqOWDD10ogoigF58MU0TCC6GpGIN2wwuppJFDJEyGplCatzJG0xqmubl7mP8c55wzlz17tmMP/Tacc9b/v/b6nv997V0gW4ONUCg91bnQVdVoSxwTpX6dt94j+bjX/XMFYJevza7tiFt+RWFt10GlUICXLQvgWtVO92nMJqkKv07Z5KihHleuAOz0hIhS50QiLRaGiuQa4Ehoz3KDO/yJ06F0GiwKxht9npFMDrHW5ZTfG2bId7BdJHLGoBSAK0UiTUbm1SwTiVxSVug2sEtTr0IXmGa+kpzSe0CN3/L8t4a7xhW5AfzRZeByFcYr87fjdlntVxRarQoTzMnyLgWnOolzInyP4IJIZEmnuAfU5EzuZh8Yam2wvs3xPyoSWd9JpDvCHVVF3XTbM9YZklNWZKFK14EW7/VqGEKArjTBx2GMWu1z1CATw3i34yp9mh5woHUBt90Cv4ACU20Id7SotLH3uK6Bs0JrtpqqNZQVmpzxb7ItCU6XR9E0cNEcZZZ61UADrDIjUz9ERTJg5y0c4GGwWZ0tJmGiv8Iu2aJVMSb5ML0W3hT2nQPa19aUDK7SYXBzml3avolHWKQxU942VS5l+aQCPKsZ3Icdng3INlyJ29H5fpIY2GofqDAcn5uizgXP24jproHgkRKQTWC4FQrxpRFutBljLAYNPkkXuMox8JxqZWjVgnJ7wyRa6lwyYFcLv1GVnQbhaeV2O2yIie4OtbXeTYbrbi/92kxrFKNYufIONT96Sn1SYHdJ7waP+iGnrNVqD2VOt1RbCPvdb7KpHjRKvRN2+Mih5LCegVxSrbpviGyl+RyRSguTqNT4vLLRVxKYPadz1N9d2ty/wDq787u0RFM4gKA4L2/L18VMEtKmfd7vvHW+cTY3L52vySl3BWuWxhgPYmdCxt1dXppRbpe+ZqBRZgfrlVhPHCO9GL9Xc4E1kMmoa2JG2R8fmDuGs2x10t5gLbDN9T3G+Mme5MAmGzpYzeEgTlH/ga2tSEuWNazHGOd7h8xeFrM1+DnkZbygPsayOO7O4J9gWbylxBhzg/VmjGXPLebFb18u8PsOn5e/e1JcP/ljONMXTtoZrHm+6uQFQa4O2J4c2GBNB6vR2vih4qnfl8VVB0530SG3BqvCnzGWxZHMMkoAfMcw4ywI1tvhBUL3Guul5MC2xLc2y+pZtTH95M/SGWY46bNgzbXH8B5jHLYlObDeig5Wg5XxQ8XTVZ+l/wP7rPZJ86RRKUTreaPPAMca2z8tLPR76jG7jVjgMYvDa+h0dNC87pD/AleEy4PeEck7AAAAAElFTkSuQmCC" />
                             </svg>
                             <h3 class="letter__title">Для просчёта мебели оставьте заявку!</h3>
@@ -70,8 +70,7 @@
                         <form class="letter__form" method="post" id="letter__form" action="#">
                             <input class="letter__input" name="firstname" id="firstname" type="text" placeholder="Имя и Фамилия">
                             <input class="letter__input" name="phone" id="phone" type="text" placeholder="Номер телефона">
-                            <input class="letter__input" name="email" id="email" type="email" placeholder="Email">
-                            <textarea class="letter__textarea" name="letter" id="messages" type="text" cols="30" rows="10" placeholder="Текстовое сообщение"></textarea>
+                            <textarea class="letter__textarea" name="letter" id="messages" type="text" cols="30" rows="10" placeholder="Какой товар интересует?"></textarea>
                             <button class="letter__btn" id="ajax-send" type="send">Отправить</button>
                             <div class="letter__form__error error" id="status_form"></div>
                         </form>
