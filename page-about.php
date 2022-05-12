@@ -52,7 +52,7 @@
         <div class="wrapper">
             <h2 class="section-head">Наши преимущества</h2>
             <div class="benefits-box">
-                <div class="benefits__column">
+                <a class="privilege__column" href="<?php echo get_page_link(152)?>">
                     <div class="benefits__column__inner">
                         <div class="benefits__column__circle">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="52px">
@@ -62,29 +62,29 @@
                         <h3 class="benefits__column__title"><? the_field('benefits_home_title_one', 9);?></h3>
                         <p class="benefits__column__text"><?php the_field('benefits_home_text_one', 9)?></p>
                     </div>
-                </div>
-                <div class="benefits__column">
+                </a>
+                <a class="privilege__column" href="<?php echo get_page_link(152)?>">
                     <div class="benefits__column__inner">
                         <div class="benefits__column__circle">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="52px">
                                 <image  x="0px" y="0px" width="64px" height="52px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAA0CAQAAACQ0/aCAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfmAxYMCxInTHFLAAADOElEQVRYw8XZT2gcZRjH8c9uk5AcjNTMbGJao2BRsIccUkQPleJNzUU8FvGkQr2oN/8iogcvohGh2KMi4j8QpQcRexKlmKKIFQSLxTZNMpM2aoul3WY8zGbd7M7YTTOz+8zhnXne9+X5zu+38+edrciL0F2GrYjEInUlRSUzO+g1TxhqyayIRGJLbe2WwbIB3rO/y/mxWCS2KBK3tF2DZQHscwTznrFgTGBCIBQaFwoEtnUFllq31GgXG6hX2gcOZEx+EJfNWsxBDoQCNbVGOy4QCFVbRgWCzNlRA+SMH31kNVuBw+5zzEy3IjbBQoFQTa3ZpopVc2bE9vsyS4Gd+GOT5UksW87IVxuKjasJmu1OowKfZZ/misTbmwbYXGzziLrEB51dIxKJZ0sGgA8lok5/doDTPQA4ges6AW7CtfwGNh834Fw/FQjJt2ChBwA1ROllOGCf3YbB/ag7UGipC4462pENEMG045LStyMm2wDOSrzFlLgH5ROJn420lB+0JvHigBeM4WWHXCjN7e1e8rA7PO6NZi5UwTILEodLK70eA36T+KolMy2ReKhqAt+XDlB3DDe2ZEIQVVWwVjoAV2x89o6DpfQyHLa9dIChtuP0fSHWoysg3Y63ALwqcVml2vUZFB0hYklqwRc+L73go/Z0AETr74Tz3ikd4N42gBqW6a8FUT8B+qzAkFEtv4EZj5Ve8tYNR4EK4nWAWbM9VqAGlvpnQQrQtGDOm6WXnPNAy1HzRpwCnHOidIDzGQr00YIQdavZq+PNx/V25fSczllj1xBJigEY9WtD0s64ZI+fchSIKMaCqdzyDJnOVWCZoiyA133Xlpkwlzt6cl2B4gC+9XFbZlfu2HvcTGpNcQDdRM1zIrc4gIve7z3AmFcae4mnnKRf94F5sw6mu8UpcHfHB6+JjjG/mBH4y5//pYoDeDonn2w4+qf900cRFpx0Jrfvoh/+f3IRCvztttxb0aqzVwNYUzW4RYTzbc+6rBiSuQSsOoW9OR+ti4sRd8r89DXgU0/a65CDVxNrCzHpeTvwSVZn4PcerQy/ybN6ytelF1/zrtGs4uve3253V/8DXFtcMu9Udte/oKLJl0EqBzcAAAAASUVORK5CYII=" />
                             </svg>
                         </div>
-                        <h3 class="benefits__column__title"><?php the_field('benefits_home_title_two', 9)?></h3>
+                        <h3 class="benefits__column__title"><? the_field('benefits_home_title_two', 9);?></h3>
                         <p class="benefits__column__text"><?php the_field('benefits_home_text_two', 9)?></p>
                     </div>
-                </div>
-                <div class="benefits__column">
+                </a>
+                <a class="privilege__column" href="<?php echo get_page_link(152)?>">
                     <div class="benefits__column__inner">
                         <div class="benefits__column__circle">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="52px">
                                 <image  x="0px" y="0px" width="64px" height="52px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAA0CAQAAACQ0/aCAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfmAxYMCxInTHFLAAADOElEQVRYw8XZT2gcZRjH8c9uk5AcjNTMbGJao2BRsIccUkQPleJNzUU8FvGkQr2oN/8iogcvohGh2KMi4j8QpQcRexKlmKKIFQSLxTZNMpM2aoul3WY8zGbd7M7YTTOz+8zhnXne9+X5zu+38+edrciL0F2GrYjEInUlRSUzO+g1TxhqyayIRGJLbe2WwbIB3rO/y/mxWCS2KBK3tF2DZQHscwTznrFgTGBCIBQaFwoEtnUFllq31GgXG6hX2gcOZEx+EJfNWsxBDoQCNbVGOy4QCFVbRgWCzNlRA+SMH31kNVuBw+5zzEy3IjbBQoFQTa3ZpopVc2bE9vsyS4Gd+GOT5UksW87IVxuKjasJmu1OowKfZZ/misTbmwbYXGzziLrEB51dIxKJZ0sGgA8lok5/doDTPQA4ges6AW7CtfwGNh834Fw/FQjJt2ChBwA1ROllOGCf3YbB/ag7UGipC4462pENEMG045LStyMm2wDOSrzFlLgH5ROJn420lB+0JvHigBeM4WWHXCjN7e1e8rA7PO6NZi5UwTILEodLK70eA36T+KolMy2ReKhqAt+XDlB3DDe2ZEIQVVWwVjoAV2x89o6DpfQyHLa9dIChtuP0fSHWoysg3Y63ALwqcVml2vUZFB0hYklqwRc+L73go/Z0AETr74Tz3ikd4N42gBqW6a8FUT8B+qzAkFEtv4EZj5Ve8tYNR4EK4nWAWbM9VqAGlvpnQQrQtGDOm6WXnPNAy1HzRpwCnHOidIDzGQr00YIQdavZq+PNx/V25fSczllj1xBJigEY9WtD0s64ZI+fchSIKMaCqdzyDJnOVWCZoiyA133Xlpkwlzt6cl2B4gC+9XFbZlfu2HvcTGpNcQDdRM1zIrc4gIve7z3AmFcae4mnnKRf94F5sw6mu8UpcHfHB6+JjjG/mBH4y5//pYoDeDonn2w4+qf900cRFpx0Jrfvoh/+f3IRCvztttxb0aqzVwNYUzW4RYTzbc+6rBiSuQSsOoW9OR+ti4sRd8r89DXgU0/a65CDVxNrCzHpeTvwSVZn4PcerQy/ybN6ytelF1/zrtGs4uve3253V/8DXFtcMu9Udte/oKLJl0EqBzcAAAAASUVORK5CYII=" />
                             </svg>
                         </div>
-                        <h3 class="benefits__column__title"><?php the_field('benefits_home_title_three', 9)?></h3>
+                        <h3 class="benefits__column__title"><? the_field('benefits_home_title_three', 9);?></h3>
                         <p class="benefits__column__text"><?php the_field('benefits_home_text_three', 9)?></p>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
 </section>
