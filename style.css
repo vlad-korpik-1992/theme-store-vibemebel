@@ -968,14 +968,23 @@ section{
     cursor: pointer;
     background-color: #000;
 }
+.byu__box{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.byu__box--bottom{
+    margin-bottom: 60px;
+}
 .buy-now{
     background-color: #fff;
+    flex: 0 0 55%;
     max-width: 235px;
-    padding: 0.5rem 1.5rem;
+    padding: 21px 0px;
+    margin-right: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 60px;
     font-size: 16px;
     line-height: 160%;
     color: #141414;
