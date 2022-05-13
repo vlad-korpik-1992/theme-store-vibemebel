@@ -19,6 +19,22 @@
                 <ul class="menu__list">
                     <li class="menu__list__items">
                         <a class="menu__list__link" href="<?php echo get_page_link(132)?>">Каталог</a>
+                        <?php
+                            $categories = get_categories( [
+                            'taxonomy'     => 'product_cat',
+                            'orderby'      => 'name',
+                            'order'        => 'ASC'
+                        ]);
+                        if($categories != []):?>
+                            <div class="menu__inside">
+                            <?php
+                                foreach ($categories as $category):?>
+                                    <a class="menu__inside__link" href="/product-category/<?echo $category->slug;?>"><?php echo $category->cat_name;?></a>
+                                <?endforeach;
+                                wp_reset_postdata();
+                            ?>
+                            </div><?
+                        endif;?>
                     </li>
                     <li class="menu__list__items">
                         <a class="menu__list__link" href="<?php echo get_page_link(19)?>">Акции и скидки</a>

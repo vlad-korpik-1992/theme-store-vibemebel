@@ -21,7 +21,7 @@
             <div class="buttons__box">
                 <?php
                     foreach ($categories as $category):?>
-                        <a class="buttons__box__items" href="#"><?php echo $category->cat_name;?></a>
+                        <a class="buttons__box__items" href="/product-category/<?echo $category->slug;?>"><?php echo $category->cat_name;?></a>
                     <?endforeach;
                     wp_reset_postdata();
                 ?>

@@ -13,7 +13,7 @@ get_header();
                 'class' => "single__img",
             );
         ?>
-        <h2 class="section-head"><?php single_post_title(); ?></h2>
+        <h2 class="section-head section-head--lh"><?php single_post_title(); ?></h2>
         <div class="single__box">
             <?php the_post_thumbnail('full', $attr);?>
             <?php echo wpautop(the_content());?>

@@ -100,7 +100,7 @@ get_header();?>
                             </svg>
                             <p class="topweek__basket__title">В корзину</p>
                         </a>
-                        <a class="buy-now topweek__basket_bottom" href="<?echo $checkout_url;?>?add-to-cart=<?echo get_the_ID();?>">Оформить заказ</a>
+                        <a class="buy-now buy-now--color topweek__basket_bottom" href="<?echo $checkout_url;?>?add-to-cart=<?echo get_the_ID();?>">Оформить заказ</a>
                     </div> 
                     <div class="cart__content">
                         <?php if(get_field( 'installment_plan_product') != ''):?>  
