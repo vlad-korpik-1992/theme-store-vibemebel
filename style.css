@@ -2471,6 +2471,20 @@ td.product-name a{
 .menu__inside__link:hover{
     color: #008000;
 }
+.cart__color{
+    display: inline-block;
+    flex: 1;
+}
+.cart__color__img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.cart__color__img:hover{
+    cursor: pointer;
+}
 @media (min-width: 992px){
     .cart__content_desctop{
         display: block;

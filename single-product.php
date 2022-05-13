@@ -83,6 +83,12 @@ get_header();?>
                     </div>
                     <div class="cart__content">
                         <h3>Возможные цвета</h3>
+                        <div class="cart__color">
+                            <?php foreach( $gallery as $image ) :
+                                $image_link = wp_get_attachment_url( $image );?>
+                                <img class="cart__color__img" src="<?echo $image_link;?>" alt="">
+                            <?php endforeach;?>
+                        </div>
                         <?php if(get_field('color_product') != ''):?>
                             <p><? echo the_field('color_product')?></p>
                         <?php else:?>
