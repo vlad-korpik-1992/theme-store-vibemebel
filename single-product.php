@@ -36,9 +36,10 @@ get_header();?>
                     <?php $gallery = $product->get_gallery_attachment_ids();?>
                     <div class="cart__slider">
                         <?php foreach( $gallery as $image ) :
+                            $image_alt = get_post_meta($image, '_wp_attachment_image_alt', TRUE);
                             $image_link = wp_get_attachment_url( $image );
                             $count_image += 1;?>
-                            <img class="cart__slider__img" src="<?echo $image_link;?>" alt="">
+                            <img class="cart__slider__img" src="<?echo $image_link;?>" alt="<?echo $image_alt;?>" id="1<?echo $image_alt;?>">
                         <?php endforeach;?>
                     </div>
                     <div class="cart__sliderprev">
@@ -83,17 +84,23 @@ get_header();?>
                     </div>
                     <div class="cart__content">
                         <h3>Возможные цвета</h3>
+                        <div class="cart__content__color">Цвет: <span id="status__color"></span></div>
                         <div class="cart__color">
                             <?php foreach( $gallery as $image ) :
-                                $image_link = wp_get_attachment_url( $image );?>
-                                <img class="cart__color__img" src="<?echo $image_link;?>" alt="">
+                                $image_alt = get_post_meta($image, '_wp_attachment_image_alt', TRUE);
+                                $image_link = wp_get_attachment_url( $image );
+                            ?>
+                                <img class="cart__color__img" src="<?echo $image_link;?>" title="<?echo $image_alt;?>" alt="<?echo $image_alt;?>" id="1<?echo $image_alt;?>">
                             <?php endforeach;?>
+                            <?php
+                                if($count_image < 8):
+                                    $count_white = 8 - $count_image;
+                                    for($i = 1; $i <= $count_white; $i++){?>
+                                        <div class="cart__color__white"></div>
+                                    <?}
+                                endif;
+                            ?>
                         </div>
-                        <?php if(get_field('color_product') != ''):?>
-                            <p><? echo the_field('color_product')?></p>
-                        <?php else:?>
-                            <small>Информация отсутствует</small>
-                        <?php endif;?>
                     </div>                    
                     <div class="cart__content">
                         <?php if($product->get_sale_price() != ''):?>

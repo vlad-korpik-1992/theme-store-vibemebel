@@ -1,5 +1,29 @@
 $(document).ready(function() {
 
+  /* Get alt image in product cart*/
+  $('.cart__color__img').click(function(){
+    let alt = $(this).attr("alt");
+    let id = $(this).attr("id");
+    console.log(id);
+    /*let id = '1' + elem.getAttribute('id');*/
+    document.getElementById('status__color').textContent = alt;
+    /*$('.slick-slide').removeClass('slick-current');
+    $('.slick-slide').removeClass('slick-active');
+    jQuery("#"+id).addClass('slick-current');
+    jQuery("#"+id).addClass('slick-active');*/
+  });
+  /*$('.tabs__box__tab').click(function (e) {
+    e.preventDefault();
+    let elem = e.target;
+    let id = '1' + elem.getAttribute('id');
+    $('.tabs__box__content').removeClass('tabs__box__content_active');
+    $('.tabs__box__tab').removeClass('tabs__box__tab_active');
+    jQuery("#"+id).addClass('tabs__box__content_active');
+    let idElem = elem.getAttribute('id');
+    console.log(idElem);
+    jQuery("#"+idElem).addClass('tabs__box__tab_active');
+  });*/
+
   /* Edit breadcrumbs link*/
   $("a[href*='shop']")
    .each(function()
@@ -40,7 +64,7 @@ $(document).ready(function() {
       {
         breakpoint: 1199,
         settings: {
-          slidesToShow: 5
+          slidesToShow: 5,
         }
       },
       {
@@ -52,7 +76,7 @@ $(document).ready(function() {
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 5
+          slidesToShow: 5,
         }
       },
       {
@@ -60,6 +84,7 @@ $(document).ready(function() {
         settings: {
           dots: false,
           slidesToShow: 4,
+          rows: 1,
           centerMode: false
         }
       },
@@ -68,6 +93,68 @@ $(document).ready(function() {
         settings: {
           dots: false,
           slidesToShow: 3,
+          rows: 1,
+          centerMode: false
+        }
+      },
+      {
+        breakpoint: 374,
+        settings: {
+          dots: false,
+          rows: 1,
+          slidesToShow: 2,
+          centerMode: false
+        }
+      }
+    ]
+  });
+
+  $('.cart__color').slick({
+    slidesToShow: 8,
+    slidesToScroll: 1,
+    infinite: true,
+    asNavFor: '.cart__slider',
+    dots: false,
+    arrows: false,
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 8,
+        }
+      },
+      {
+        breakpoint: 1290,
+        settings: {
+          slidesToShow: 7,
+        }
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 6,
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          dots: false,
+          slidesToShow: 3,
+          centerMode: false
+        }
+      },
+      {
+        breakpoint: 424,
+        settings: {
+          dots: false,
+          slidesToShow: 2,
           centerMode: false
         }
       },
