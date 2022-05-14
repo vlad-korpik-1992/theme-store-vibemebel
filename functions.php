@@ -282,20 +282,9 @@ function custom_override_checkout_unset_postcode( $fields ) {
 	return $fields;
 }
 
-add_action( 'woocommerce_after_order_notes', 'my_custom_checkout_field' );
+add_action( 'woocommerce_before_order_notes', 'my_custom_checkout_field' );
 
 function my_custom_checkout_field( $checkout ) {
-
-    echo '<div id="my_field_furniture_color"><h2>' . __('') . '</h2>';
-
-    woocommerce_form_field( 'my_field_furniture_color', array(
-        'type'          => 'text',
-        'class'         => array('my-field-class form-row-wide'),
-        'label'         => __('Выбор цвета'),
-        'placeholder'   => __('Укажите цвет мебели'),
-        ), $checkout->get_value( 'my_field_furniture_color' ));
-
-    echo '</div>';
 
 	echo '<div id="my_field_region"><h2>' . __('') . '</h2>';
 
@@ -330,6 +319,17 @@ function my_custom_checkout_field( $checkout ) {
         'label'         => __('Квартира'),
         'placeholder'   => __('Укажите квартиру'),
         ), $checkout->get_value( 'my_field_room' ));
+
+    echo '</div>';
+
+	echo '<div id="my_field_furniture_color"><h2>' . __('') . '</h2>';
+
+    woocommerce_form_field( 'my_field_furniture_color', array(
+        'type'          => 'text',
+        'class'         => array('my-field-class form-row-wide'),
+        'label'         => __('Выбор цвета'),
+        'placeholder'   => __('Укажите цвет мебели'),
+        ), $checkout->get_value( 'my_field_furniture_color' ));
 
     echo '</div>';
 
@@ -368,6 +368,19 @@ function custom_override_checkout_fields( $fields ) {
      return $fields;
 }
 
+add_filter( 'woocommerce_checkout_fields' , 'override_billing_checkout_fields', 20, 1 );
+function override_billing_checkout_fields( $fields ) {
+    $fields['billing']['billing_phone']['placeholder'] = 'Укадите свой номер телефона для связи';
+    return $fields;
+}
+add_filter('woocommerce_default_address_fields', 'override_default_address_checkout_fields', 20, 1);
+function override_default_address_checkout_fields( $address_fields ) {
+    $address_fields['first_name']['placeholder'] = 'Укажите имя';
+    $address_fields['last_name']['placeholder'] = 'Укажите фамилию';
+    $address_fields['address_1']['placeholder'] = 'Укажите город';
+    return $address_fields;
+}
+
 /* change the order of the fields on the checkout page */
 
 function sort_fields_billing($fields) {
@@ -383,6 +396,8 @@ function sort_fields_billing($fields) {
 }
 
 add_filter("woocommerce_checkout_fields", "sort_fields_billing");
+
+
 
 /**/
 
