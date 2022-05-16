@@ -27,10 +27,11 @@
               </div>
               <?php echo $review['content_feedback']; ?>
               <? $feedback_screenshots = $review['screenshots_feedback'];
+				$images = '';
 				foreach($feedback_screenshots as $screenshot) :
 					$images = $screenshot['images_screenshots_feedback'];
 				endforeach;
-                  if($images != ''):?>
+                  if($images != null):?>
                     <div class="feeadback__images">
                       <? foreach($feedback_screenshots as $screenshot) :?>
                         <div class="feeadback__images__col">
