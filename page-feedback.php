@@ -25,9 +25,12 @@
                   <p class="reviews__head__subtitle"><?php echo $review['data_feedback']; ?></p>
                 </div>
               </div>
-              <p class="reviews__content"><?php echo $review['content_feedback']; ?></p>
+              <?php echo $review['content_feedback']; ?>
               <? $feedback_screenshots = $review['screenshots_feedback'];
-                  if($feedback_screenshots != []):?>
+				foreach($feedback_screenshots as $screenshot) :
+					$images = $screenshot['images_screenshots_feedback'];
+				endforeach;
+                  if($images != ''):?>
                     <div class="feeadback__images">
                       <? foreach($feedback_screenshots as $screenshot) :?>
                         <div class="feeadback__images__col">
