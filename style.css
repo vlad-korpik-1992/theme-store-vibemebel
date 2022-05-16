@@ -2384,7 +2384,7 @@ td.product-name a{
 .feeadback__images__col__image{
     object-fit: cover;
     width: 100%;
-    height: 300px;
+    height: 150px;
 }
 .information__contacts{
     padding: 10px 0 30px;
@@ -2449,17 +2449,13 @@ td.product-name a{
     max-width: 280px;
     background-color: #fff;
     position: absolute;
-    left: -26px;
+    left: 0px;
     top: 25px;
     padding: 10px;
     border: 5px solid #fcf9fc;
     z-index: 2;
     box-shadow: 0px 10px 55px 0px rgb(0 0 0 / 15%);
     transition: 0.3s all;
-}
-.menu__list__items:hover .menu__inside{
-    display: flex;
-    flex-direction: column;
 }
 .menu__inside__link{
     position: relative;
@@ -2474,7 +2470,6 @@ td.product-name a{
 .cart__color{
     display: flex;
     flex-wrap: wrap;
-    /*width: 100%;*/
     margin-right: 0;
 }
 .cart__color .slick-track{
@@ -2500,6 +2495,66 @@ td.product-name a{
     font-size: 14px;
     line-height: 18px;
     padding-bottom: 10px;
+}
+.menu__list__items__icon{
+    display: none;
+}
+.checkout__column__content{
+    color: #111111;
+    font-size: 12px;
+    line-height: 100%;
+    display: block;
+}
+#billing_country{
+    width: 100%;
+    padding: 10px;
+    max-width: 50rem;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border: 1px solid #BBBBBB;
+}
+.woocommerce input.button.alt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    background-color: #009b4a;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 75%;
+    transition: 0.3s all;
+    padding: 15px 30px !important;
+    margin-top: 15px;
+    margin-right: 15px;
+    font-weight: 400;
+}
+#begateway_payment_form{
+    display: flex;
+    align-items: center;
+}
+.woocommerce a.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    background-color: #ebe9eb;
+    color: #515151;
+    font-size: 18px;
+    line-height: 75%;
+    transition: 0.3s all;
+    padding: 15px 30px !important;
+    font-weight: 400;
+    height: 43px;
+    margin-top: 15px;
+}
+@media (min-width: 768px){
+    .menu__list__items:hover .menu__inside{
+        display: flex;
+        flex-direction: column;
+    }
+    .column__half--bottom{
+        padding-bottom: 30px;
+    }
 }
 @media (min-width: 992px){
     .cart__content_desctop{
@@ -2784,6 +2839,23 @@ td.product-name a{
         max-width: 100%;
         padding-top: 20px;
     }
+    .menu__list{
+        overflow-x: scroll;
+        max-width: 766px;
+    }
+    .menu__list__items{
+        padding-right: 25px;
+        white-space: nowrap;
+    }
+    .menu__list::-webkit-scrollbar, .footer__menu__list::-webkit-scrollbar{
+        height: 7px;
+        width: 7px;
+        background: #000;
+    }
+    
+    .menu__list::-webkit-scrollbar-thumb:horizontal, .footer__menu__list::-webkit-scrollbar-thumb:horizontal{
+        background: #009b4a;
+    }
     .hero__box__circle{
         width: 180px;
         height: 180px;
@@ -2974,12 +3046,30 @@ td.product-name a{
         flex-wrap: nowrap;
         flex: none;
     }
+    .menu__list__items__icon{
+        display: block;
+        position: absolute;
+        top: 8px;
+        left: 63px;
+        width: 8px;
+        height: 12px;
+        transform: rotate(90deg);
+    }
+    .menu__inside--active{
+        display: flex;
+    }
+    .menu__inside{
+        flex-direction: column;
+        position: fixed;
+        top: 132px;
+        left: 15px;
+        padding: 0 10px;
+    }
+    .menu__inside__link{
+        padding: 10px 0 0;
+    }
 }
 @media (max-width: 575px){
-    .menu__list{
-        overflow-x: scroll;
-        max-width: 576px;
-    }
     .hero__box__circle_center {
         top: 200px;
     }
@@ -3010,19 +3100,6 @@ td.product-name a{
         overflow-x: scroll;
         max-width: 576px;
         padding-bottom: 18px;
-    }
-    .menu__list__items{
-        padding-right: 25px;
-        white-space: nowrap;
-    }
-    .menu__list::-webkit-scrollbar, .footer__menu__list::-webkit-scrollbar{
-        height: 7px;
-        width: 7px;
-        background: #000;
-    }
-    
-    .menu__list::-webkit-scrollbar-thumb:horizontal, .footer__menu__list::-webkit-scrollbar-thumb:horizontal{
-        background: #009b4a;
     }
     .menu__list__link{
         font-size: 16px;
@@ -3127,6 +3204,9 @@ td.product-name a{
     }
     .information__contacts__items:last-child{
         padding-bottom: 0;
+    }
+    .menu__list__items__icon{
+        left: 70px;
     }
 }
 @media (max-width: 424px){

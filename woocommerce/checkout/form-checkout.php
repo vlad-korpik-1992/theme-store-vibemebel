@@ -42,6 +42,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                 <?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
 
+                <p class="checkout__column__content">Примечание: текст условия доставки мебели в регионе при заказе через интернет магазин</p>
+
                 <?php endif; ?>
 
                 <?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>

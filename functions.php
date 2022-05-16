@@ -264,11 +264,11 @@ function custom_override_checkout_unset_state( $fields ) {
 	return $fields;
 }
 
-add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_unset_country' );
+/*add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_unset_country' );
 function custom_override_checkout_unset_country( $fields ) {
 	unset($fields['billing']['billing_country']);
 	return $fields;
-}
+}*/
 
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_unset_email' );
 function custom_override_checkout_unset_email( $fields ) {
@@ -365,6 +365,7 @@ function my_custom_checkout_field_display_admin_order_meta($order){
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 function custom_override_checkout_fields( $fields ) {
      $fields["billing"]["billing_address_1"]['label'] = 'Город';
+	 $fields["billing"]["billing_country"]['label'] = 'Страна';
      return $fields;
 }
 
@@ -397,7 +398,39 @@ function sort_fields_billing($fields) {
 
 add_filter("woocommerce_checkout_fields", "sort_fields_billing");
 
+function update_woo_checkout_fields( $fields ) {
 
+    $fields['billing']['billing_country'] = [
+        'type' => 'select',
+        'required' => 'true',
+		'class' => array('input-text  form-row-wide'),
+        'label' => __( 'Страна', 'woocommerce' ),
+        'options' => [
+            'BY' => __( 'Belarus', 'woocommerce' ),
+			'RU' => __( 'Russia', 'woocommerce' ),
+        ],
+    ];
+
+    return $fields;
+}
+
+add_filter( 'woocommerce_checkout_fields', 'update_woo_checkout_fields' );
+
+/*add_filter( 'woocommerce_checkout_fields', 'add_custom_select_country' );
+function add_custom_select_country( $fields ) {
+    $fields['billing']['billing_select_country'] = array(
+        'type'      => 'select',
+        'required'  => true,
+        'clear'     => false,
+        'options'   => array(
+        'country'   => __('Country', 'woocommerce' ),
+        'fr'        => __('France', 'woocommerce' ),
+        'gb'        => __('United Kingdom', 'woocommerce' ),
+        'ru'        => __('Russian', 'woocommerce' )
+    )
+);
+return $fields;
+}*/
 
 /**/
 

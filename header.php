@@ -12,13 +12,16 @@
 <header class="header">
     <div class="wrapper">
         <div class="header__box">
-            <div class="header__logo">
+            <a href="<?php echo site_url(); ?>" class="header__logo">
                 <img class="header__logo__img" src="<?php bloginfo('template_url'); ?>/assets/img/logo.png" alt="На Главную">
-            </div>
+            </a>
             <nav class="menu">
                 <ul class="menu__list">
                     <li class="menu__list__items">
                         <a class="menu__list__link" href="<?php echo get_page_link(132)?>">Каталог</a>
+                        <svg class="menu__list__items__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 12">
+                            <path d="M0.948242 10.59L5.71908 6L0.948242 1.41L2.41699 0L8.66699 6L2.41699 12L0.948242 10.59Z" fill="#323232"></path>
+                        </svg>
                         <?php
                             $categories = get_categories( [
                             'taxonomy'     => 'product_cat',

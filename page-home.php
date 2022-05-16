@@ -301,16 +301,18 @@
                 foreach($reviews as $review) :
                     if($col_reviews < 2):?>
                         <div class="column__half">
-                            <div class="reviews__head">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="24px">
-                                    <image  x="0px" y="0px" width="22px" height="24px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAYCAQAAABUt8XAAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfmAxYQKxKn9A/9AAABMUlEQVQ4y42SMUvDQBTHf2eE7BocnLpJLR0KOnaqdHT0I3QpDh2F7lUQ/QbuFgr9Cp06ZCwYhU6FDo6CaWkheQ416SW5o3kPjrt7P/539/6HoCeKDmOWLBnTQeWqmUWFSWZjQsUC4zJDcjnDNcODAioIAzO8MMILA4xnRAXBSyZHJHGKLfaVVNkhNOqGOAVlifCNur5EBWWBBtuC7paGzZQecWYjpmd1UKDJPF3MaWarSrTrKUcipbjgGvD5ElGOduNEGY8uUzYMqaWn1BiyYUo36fRuaGlti/hkxIiASGtf6x+mzcrqXpIr2gLUWR9EBWFN3eGJK8rEMS7cltIVYm4QeC4F93cPVLwdRF81B3ng1wr+cJ///Ge8GPoS8siJ2e5z7rikSpWYgIAP3uV7X/8DrESSGziIQHUAAAAASUVORK5CYII=" />
-                                </svg>
-                                <div class="reviews__head__box">
-                                    <p class="reviews__head__title"><?php echo $review['name_feedback']; ?></p>
-                                    <p class="reviews__head__subtitle"><?php echo $review['data_feedback']; ?></p>
+                            <a class="reviews__link" href="<?php echo get_page_link(99)?>">
+                                <div class="reviews__head">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="24px">
+                                        <image  x="0px" y="0px" width="22px" height="24px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAYCAQAAABUt8XAAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfmAxYQKxKn9A/9AAABMUlEQVQ4y42SMUvDQBTHf2eE7BocnLpJLR0KOnaqdHT0I3QpDh2F7lUQ/QbuFgr9Cp06ZCwYhU6FDo6CaWkheQ416SW5o3kPjrt7P/539/6HoCeKDmOWLBnTQeWqmUWFSWZjQsUC4zJDcjnDNcODAioIAzO8MMILA4xnRAXBSyZHJHGKLfaVVNkhNOqGOAVlifCNur5EBWWBBtuC7paGzZQecWYjpmd1UKDJPF3MaWarSrTrKUcipbjgGvD5ElGOduNEGY8uUzYMqaWn1BiyYUo36fRuaGlti/hkxIiASGtf6x+mzcrqXpIr2gLUWR9EBWFN3eGJK8rEMS7cltIVYm4QeC4F93cPVLwdRF81B3ng1wr+cJ///Ge8GPoS8siJ2e5z7rikSpWYgIAP3uV7X/8DrESSGziIQHUAAAAASUVORK5CYII=" />
+                                    </svg>
+                                    <div class="reviews__head__box">
+                                        <p class="reviews__head__title"><?php echo $review['name_feedback']; ?></p>
+                                        <p class="reviews__head__subtitle"><?php echo $review['data_feedback']; ?></p>
+                                    </div>
                                 </div>
-                            </div>
-                            <p class="reviews__content"><?php echo $review['content_feedback']; ?></p>
+                                <p class="reviews__content"><?php echo $review['content_feedback']; ?></p>
+                            </a>
                         </div>
                     <? endif;
                     $col_reviews += 1; 

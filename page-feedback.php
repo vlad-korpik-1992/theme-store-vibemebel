@@ -12,13 +12,19 @@
 <section class="feeadback">
     <div class="wrapper">
         <h1 class="section-head"><?php single_post_title(); ?></h1>
-        <?$reviews = get_field('feedback');
-        foreach($reviews as $review) :?>
-          <div class="feeadback__box">
-            <div class="feeadback__box__head">
-              <p class="feeadback__box__name"><?php echo $review['name_feedback']; ?></p>
-            </div>
-            <div class="feeadback__box__footer">
+        <div class="box">
+          <?$reviews = get_field('feedback');
+          foreach($reviews as $review) :?>
+            <div class="column__half column__half--bottom">
+              <div class="reviews__head">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="24px">
+                  <image  x="0px" y="0px" width="22px" height="24px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAYCAQAAABUt8XAAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfmAxYQKxKn9A/9AAABMUlEQVQ4y42SMUvDQBTHf2eE7BocnLpJLR0KOnaqdHT0I3QpDh2F7lUQ/QbuFgr9Cp06ZCwYhU6FDo6CaWkheQ416SW5o3kPjrt7P/539/6HoCeKDmOWLBnTQeWqmUWFSWZjQsUC4zJDcjnDNcODAioIAzO8MMILA4xnRAXBSyZHJHGKLfaVVNkhNOqGOAVlifCNur5EBWWBBtuC7paGzZQecWYjpmd1UKDJPF3MaWarSrTrKUcipbjgGvD5ElGOduNEGY8uUzYMqaWn1BiyYUo36fRuaGlti/hkxIiASGtf6x+mzcrqXpIr2gLUWR9EBWFN3eGJK8rEMS7cltIVYm4QeC4F93cPVLwdRF81B3ng1wr+cJ///Ge8GPoS8siJ2e5z7rikSpWYgIAP3uV7X/8DrESSGziIQHUAAAAASUVORK5CYII=" />
+                </svg>
+                <div class="reviews__head__box">
+                  <p class="reviews__head__title"><?php echo $review['name_feedback']; ?></p>
+                  <p class="reviews__head__subtitle"><?php echo $review['data_feedback']; ?></p>
+                </div>
+              </div>
               <p class="reviews__content"><?php echo $review['content_feedback']; ?></p>
               <? $feedback_screenshots = $review['screenshots_feedback'];
                   if($feedback_screenshots != []):?>
@@ -37,10 +43,9 @@
                   <? echo $review['link_video'];?>
                 </div>
               <?endif;?>
-              <p class="feeadback__box__date"><?php echo $review['data_feedback']; ?> </p>
             </div>
-          </div>
-        <?php endforeach;?>
+          <?php endforeach;?>
+        </div>
     </div>
 </section>
 <?php get_footer(); ?>

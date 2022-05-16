@@ -5,24 +5,13 @@ $(document).ready(function() {
     let alt = $(this).attr("alt");
     let id = $(this).attr("id");
     console.log(id);
-    /*let id = '1' + elem.getAttribute('id');*/
     document.getElementById('status__color').textContent = alt;
-    /*$('.slick-slide').removeClass('slick-current');
-    $('.slick-slide').removeClass('slick-active');
-    jQuery("#"+id).addClass('slick-current');
-    jQuery("#"+id).addClass('slick-active');*/
   });
-  /*$('.tabs__box__tab').click(function (e) {
-    e.preventDefault();
-    let elem = e.target;
-    let id = '1' + elem.getAttribute('id');
-    $('.tabs__box__content').removeClass('tabs__box__content_active');
-    $('.tabs__box__tab').removeClass('tabs__box__tab_active');
-    jQuery("#"+id).addClass('tabs__box__content_active');
-    let idElem = elem.getAttribute('id');
-    console.log(idElem);
-    jQuery("#"+idElem).addClass('tabs__box__tab_active');
-  });*/
+  
+  /* Menu inside active*/
+  $('.menu__list__items__icon').click(function(){
+    $( ".menu__inside" ).toggleClass('menu__inside--active');
+  });
 
   /* Edit breadcrumbs link*/
   $("a[href*='shop']")
