@@ -1843,6 +1843,11 @@ p.about__profession{
 .feeadback__box:nth-child(2n) .feeadback__box__footer{
     border: 3px solid #ae5a4d;
 }
+.woocommerce-order{
+    font-size: 16px;
+    line-height: 160%;
+    padding-bottom: 5px;
+}
 .woocommerce .cart-collaterals .cart_totals h2{
     font-size: 18px;
     line-height: 120%;
