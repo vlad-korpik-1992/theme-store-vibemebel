@@ -871,7 +871,8 @@ section{
     padding-right: 23px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+	padding-bottom: 30px;
 }
 .privilege__column{
     position: relative;
@@ -980,12 +981,12 @@ section{
     background-color: #fff;
     flex: 0 0 55%;
     max-width: 235px;
-    padding: 21px 0px;
+    padding: 10px 0px;
     margin-right: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 160%;
     color: #141414;
     border-radius: 3px;
@@ -2485,7 +2486,6 @@ td.product-name a{
     height: 50px;
     border-radius: 50%;
     margin-right: 5px;
-    margin-bottom: 5px;
 }
 .cart__color__img:hover{
     cursor: pointer;

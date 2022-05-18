@@ -371,7 +371,7 @@ function custom_override_checkout_fields( $fields ) {
 
 add_filter( 'woocommerce_checkout_fields' , 'override_billing_checkout_fields', 20, 1 );
 function override_billing_checkout_fields( $fields ) {
-    $fields['billing']['billing_phone']['placeholder'] = 'Укадите свой номер телефона для связи';
+    $fields['billing']['billing_phone']['placeholder'] = 'Укажите свой номер телефона для связи';
     return $fields;
 }
 add_filter('woocommerce_default_address_fields', 'override_default_address_checkout_fields', 20, 1);
