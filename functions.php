@@ -252,23 +252,11 @@ function custom_override_checkout_unset_address( $fields ) {
 	return $fields;
 }
 
-add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_unset_city' );
-function custom_override_checkout_unset_city( $fields ) {
-	unset($fields['billing']['billing_city']);
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_unset_address_1' );
+function custom_override_checkout_unset_address_1( $fields ) {
+	unset($fields['billing']['billing_address_1']);
 	return $fields;
 }
-
-add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_unset_state' );
-function custom_override_checkout_unset_state( $fields ) {
-	unset($fields['billing']['billing_state']);
-	return $fields;
-}
-
-/*add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_unset_country' );
-function custom_override_checkout_unset_country( $fields ) {
-	unset($fields['billing']['billing_country']);
-	return $fields;
-}*/
 
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_unset_email' );
 function custom_override_checkout_unset_email( $fields ) {
@@ -286,18 +274,6 @@ add_action( 'woocommerce_before_order_notes', 'my_custom_checkout_field' );
 
 function my_custom_checkout_field( $checkout ) {
 
-	echo '<div id="my_field_region"><h2>' . __('') . '</h2>';
-
-    woocommerce_form_field( 'my_field_region', array(
-        'type'          => 'text',
-		'required'		=> true,
-        'class'         => array('my-field-class form-row-wide'),
-        'label'         => __('Область'),
-        'placeholder'   => __('Укажите область'),
-        ), $checkout->get_value( 'my_field_region' ));
-
-    echo '</div>';
-
 	echo '<div id="my_field_street"><h2>' . __('') . '</h2>';
 
     woocommerce_form_field( 'my_field_street', array(
@@ -311,6 +287,14 @@ function my_custom_checkout_field( $checkout ) {
     echo '</div>';
 
 	echo '<div id="my_field_room"><h2>' . __('') . '</h2>';
+
+	woocommerce_form_field( 'my_field_house_number', array(
+        'type'          => 'text',
+		'required'		=> true,
+        'class'         => array('my-field-class form-row-wide'),
+        'label'         => __('Номер дома'),
+        'placeholder'   => __('Укажите номер дома'),
+        ), $checkout->get_value( 'my_field_house_number' ));
 
     woocommerce_form_field( 'my_field_room', array(
         'type'          => 'text',
@@ -327,25 +311,24 @@ function my_custom_checkout_field( $checkout ) {
     woocommerce_form_field( 'my_field_furniture_color', array(
         'type'          => 'text',
         'class'         => array('my-field-class form-row-wide'),
-        'label'         => __('Выбор цвета'),
+        'label'         => __('Укажите выбранный цвет каждого товара в корзине'),
         'placeholder'   => __('Укажите цвет мебели'),
         ), $checkout->get_value( 'my_field_furniture_color' ));
 
     echo '</div>';
 
 }
-
 add_action( 'woocommerce_checkout_update_order_meta', 'my_custom_checkout_field_update_order_meta' );
 
 function my_custom_checkout_field_update_order_meta( $order_id ) {
     if ( ! empty( $_POST['my_field_furniture_color'] ) ) {
         update_post_meta( $order_id, 'Цвет мебели', sanitize_text_field( $_POST['my_field_furniture_color'] ) );
     }
-	if ( ! empty( $_POST['my_field_region'] ) ) {
-        update_post_meta( $order_id, 'Область', sanitize_text_field( $_POST['my_field_region'] ) );
-    }
 	if ( ! empty( $_POST['my_field_street'] ) ) {
         update_post_meta( $order_id, 'Улица', sanitize_text_field( $_POST['my_field_street'] ) );
+    }
+	if ( ! empty( $_POST['my_field_house_number'] ) ) {
+        update_post_meta( $order_id, 'Номер дома', sanitize_text_field( $_POST['my_field_house_number'] ) );
     }
 	if ( ! empty( $_POST['my_field_room'] ) ) {
         update_post_meta( $order_id, 'Квартира', sanitize_text_field( $_POST['my_field_room'] ) );
@@ -355,23 +338,26 @@ function my_custom_checkout_field_update_order_meta( $order_id ) {
 add_action( 'woocommerce_admin_order_data_after_billing_address', 'my_custom_checkout_field_display_admin_order_meta', 10, 1 );
 
 function my_custom_checkout_field_display_admin_order_meta($order){
-    echo '<p><strong>'.__('Цвет мебели').':</strong> ' . get_post_meta( $order->id, 'Цвет мебели', true ) . '</p>';
-	echo '<p><strong>'.__('Область').':</strong> ' . get_post_meta( $order->id, 'Область', true ) . '</p>';
 	echo '<p><strong>'.__('Улица').':</strong> ' . get_post_meta( $order->id, 'Улица', true ) . '</p>';
+	echo '<p><strong>'.__('Номер дома').':</strong> ' . get_post_meta( $order->id, 'Номер дома', true ) . '</p>';
 	echo '<p><strong>'.__('Квартира').':</strong> ' . get_post_meta( $order->id, 'Квартира', true ) . '</p>';
+	echo '<p><strong>'.__('Цвет мебели').':</strong> ' . get_post_meta( $order->id, 'Цвет мебели', true ) . '</p>';
 }
 /**/
 
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 function custom_override_checkout_fields( $fields ) {
-     $fields["billing"]["billing_address_1"]['label'] = 'Город';
 	 $fields["billing"]["billing_country"]['label'] = 'Страна';
+	 $fields["billing"]["billing_state"]['label'] = 'Область';
+	 $fields["billing"]["billing_city"]['label'] = 'Город (населенный пункт)';
      return $fields;
 }
 
 add_filter( 'woocommerce_checkout_fields' , 'override_billing_checkout_fields', 20, 1 );
 function override_billing_checkout_fields( $fields ) {
-    $fields['billing']['billing_phone']['placeholder'] = 'Укажите свой номер телефона для связи';
+	$fields['billing']['billing_state']['placeholder'] = 'Укажите область';
+	$fields['billing']['billing_city']['placeholder'] = 'Укажите город / населенный пункт';
+    $fields['billing']['billing_phone']['placeholder'] = '+375 00 111 111 1';
     return $fields;
 }
 add_filter('woocommerce_default_address_fields', 'override_default_address_checkout_fields', 20, 1);
@@ -390,7 +376,8 @@ function sort_fields_billing($fields) {
 	$fields["billing"]["billing_last_name"]["priority"] = 2;
 	$fields["billing"]["billing_phone"]["priority"] = 3;
 	$fields["billing"]["billing_country"]["priority"] = 4;
-	$fields["billing"]["billing_address_1"]["priority"] = 5;
+	$fields["billing"]["billing_state"]["priority"] = 5;
+	$fields["billing"]["billing_city"]["priority"] = 6;
 	
 	return $fields;
 	
@@ -415,22 +402,6 @@ function update_woo_checkout_fields( $fields ) {
 }
 
 add_filter( 'woocommerce_checkout_fields', 'update_woo_checkout_fields' );
-
-/*add_filter( 'woocommerce_checkout_fields', 'add_custom_select_country' );
-function add_custom_select_country( $fields ) {
-    $fields['billing']['billing_select_country'] = array(
-        'type'      => 'select',
-        'required'  => true,
-        'clear'     => false,
-        'options'   => array(
-        'country'   => __('Country', 'woocommerce' ),
-        'fr'        => __('France', 'woocommerce' ),
-        'gb'        => __('United Kingdom', 'woocommerce' ),
-        'ru'        => __('Russian', 'woocommerce' )
-    )
-);
-return $fields;
-}*/
 
 /**/
 

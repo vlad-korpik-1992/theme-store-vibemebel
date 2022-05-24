@@ -39,9 +39,25 @@ get_header();
                 <p>В случае, если в каталоге на сайте Вы не нашли желаемые цветы или цветочные композиции, то есть возможность заказа за 7 дней до предполагаемого момента вручения.</p>
             </div>
         </div>
-        <div class="information__box">
+        <div class="information__box" id="delivery-time">
             <div class="information__items">
-                <strong class="information__title">Заказ мебели и фурнитуры</strong>
+                <strong class="information__title">Свое производство</strong>
+            </div>
+            <div class="information__items information__items_content">
+                <p>В случае, если в каталоге на сайте Вы не нашли желаемые цветы или цветочные композиции, то есть возможность заказа за 7 дней до предполагаемого момента вручения.</p>
+            </div>
+        </div>
+        <div class="information__box" id="installment-payment">
+            <div class="information__items">
+                <strong class="information__title">Рассрочка платежа</strong>
+            </div>
+            <div class="information__items information__items_content">
+                <p>В случае, если в каталоге на сайте Вы не нашли желаемые цветы или цветочные композиции, то есть возможность заказа за 7 дней до предполагаемого момента вручения.</p>
+            </div>
+        </div>
+        <div class="information__box" id="quality-assurance">
+            <div class="information__items">
+                <strong class="information__title">Гарантия качества</strong>
             </div>
             <div class="information__items information__items_content">
                 <p>Вся информация о платёжных карточках наших клиентов конфидециальна и не подлежит разглашению. Мы заботимся о Вашей безопасности.</p>

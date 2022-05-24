@@ -597,8 +597,8 @@ section{
 }
 .menu{
     position: relative;
-    flex: 0 0 70%;
-    max-width: 70%;
+    flex: 0 0 75%;
+    max-width: 75%;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 30px;
@@ -689,7 +689,9 @@ section{
     position: absolute;
     height: 218px;
     width: 218px;
-    background-color: #000;
+    background-color: #00000060;
+    border: 1px solid #000;
+    backdrop-filter: blur(5px);
     border-radius: 50%;
     padding: 0 25px;
     display: flex;
@@ -731,7 +733,7 @@ section{
     height: 70px;
     width: 371px;
     max-width: 371px;
-    background-color: #ae5a4d;
+    background-color: #7894b1;
     color: #ffffff;
     font-size: 24px;
     line-height: 18px;
@@ -804,8 +806,9 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000000;
+    background-color: #fff;
     border-radius: 50%;
+    border: 3px solid  #000;
     flex: 0 0 111px;
     max-width: 111px;
     height: 111px;
@@ -813,6 +816,9 @@ section{
 .category__box__icon{
     width:48px;
     height:64px;
+}
+.category__box__icon--w{
+    width:64px;
 }
 .category__box__content{
     display: flex;
@@ -832,18 +838,43 @@ section{
 .category__application{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid #000;
+    background-image: url(assets/img/category-application-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 50px 0px;
     margin-bottom: 50px;
+    transition: 0.3s all;
+}
+.category__application:hover{
+    transform: scale(1.03);
+}
+.category__application__link{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: -25px;
+    margin-right: -25px;
+}
+.category__application__col{
+    position: relative;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.category__application__col p{
+    font-size: 16px;
+    line-height: 140%;
+    padding-bottom: 5px;
+    color: #fff;
+}
+.category__application__col p:last-child{
+    padding-bottom: 0;
 }
 .category__application__title{
-    font-size: 28px;
-    line-height: 30px;
-    padding-bottom: 29px;
-    text-align: center;
-    max-width: 625px;
+    font-size: 24px;
+    color: #fff;
+    line-height: 140%;
+    padding-bottom: 30px;
 }
 .category__application__btn{
     display: flex;
@@ -852,7 +883,7 @@ section{
     height: 70px;
     width: 375px;
     max-width: 375px;
-    background-color: #ae5a4d;
+    background-color: #7894b1;
     color: #ffffff;
     font-size: 24px;
     line-height: 18px;
@@ -919,7 +950,7 @@ section{
 }
 .topweek__title{
     font-size: 30px;
-    line-height: 30px;
+    line-height: 20px;
     text-decoration: underline;
     color: #000000;
 }
@@ -1026,14 +1057,15 @@ p.topweek__basket__title{
 .topweek__discount{
     display: flex;
     align-items: flex-end;
-    background-color: #000000;
-    width: 286px;
-    max-width: 286px;
+    background-color: #fff;
+    width: 300px;
+    max-width: 300px;
     padding: 20px 0 20px 20px;
-    color: #ffffff;
+    color: #000;
     font-size: 20px;
     line-height: 24px;
     clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0% 100%, 0 50%, 0% 0%);
+    border-left: 5px solid #009a49;
 }
 .catalog__cover{
     position: relative;
@@ -1124,6 +1156,14 @@ p.topweek__basket__title{
     line-height: 18px;
     color: #000;
 }
+.letter__label{
+    display: block;
+    margin: 0 0 2px;
+    color: #111111;
+    font-size: 12px;
+    line-height: 100%;
+    padding: 0;
+}
 .letter__textarea{
     max-width: 100%;
     height: 115px;
@@ -1140,7 +1180,7 @@ p.topweek__basket__title{
 .letter__btn{
     max-width: 100%;
     height: 70px;
-    background-color: #ae5a4d;
+    background-color: #7894b1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1379,8 +1419,8 @@ p.topweek__basket__title{
 .news__box__data{
     display: block;
     font-size: 60px;
-    line-height: 115%;
-    padding-bottom: 25px;
+    line-height: 65%;
+    padding-bottom: 40px;
 }
 .news__box__title{
     display: block;
@@ -1473,6 +1513,9 @@ p.topweek__basket__title{
     color: #000;
     transition: 0.3s all;
 }
+.contacts_tel{
+    padding-bottom: 25px;
+}
 .contacts_mail{
     text-decoration: underline;
 }
@@ -1531,6 +1574,7 @@ p.about__profession{
     font-size: 20px;
     line-height: 160%;
     padding-bottom: 30px;
+    margin-top: -9px;
 }
 .about__content p:last-child{
     padding-bottom: 0;
@@ -1550,7 +1594,7 @@ p.about__profession{
     height: 70px;
     width: 100%;
     max-width: 100%;
-    background-color: #ae5a4d;
+    background-color: #7894b1;
     color: #ffffff;
     font-size: 24px;
     line-height: 18px;
@@ -1561,6 +1605,9 @@ p.about__profession{
     justify-content: space-between;
     font-size: 20px;
     line-height: 160%;
+}
+.directory_content p{
+    margin-top: -9px;
 }
 .bgimg{
     padding-top: 871px;
@@ -1748,7 +1795,7 @@ p.about__profession{
 }
 .added_to_cart{
     position: absolute;
-    bottom: 128px;
+    bottom: 143px;
     left: 23px;
     right: 23px;
     color: #fff;
@@ -1758,7 +1805,7 @@ p.about__profession{
     display: block;
     max-width: 100%;
     text-decoration: none;
-    background-color: #ae5a4d;
+    background-color: #7894b1;
     text-shadow: 0px 1px 1px #fff;
 }
 .cart-collaterals {
@@ -2343,7 +2390,7 @@ td.product-name a{
     cursor: pointer;
     transition: 0.3s all;
     color: #fff;
-    background-color: #ae5a4d;
+    background-color: #7894b1;
     transition: all ease-in-out 0.3s;
 }
 .error-page__link:hover{
@@ -2436,7 +2483,7 @@ td.product-name a{
     text-decoration: underline;
 }
 .information__btn:hover{
-    background-color: #ae5a4d;
+    background-color: #7894b1;
 }
 .information__svg{
     height: 30px;
@@ -2552,6 +2599,19 @@ td.product-name a{
     height: 43px;
     margin-top: 15px;
 }
+#my_field_room{
+    display: flex;
+}
+#my_field_house_number_field, #my_field_room_field{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+#my_field_house_number_field{
+    padding-right: 15px !important;
+}
+#my_field_room_field{
+    padding-left: 15px !important;
+}
 @media (min-width: 768px){
     .menu__list__items:hover .menu__inside{
         display: flex;
@@ -2574,8 +2634,8 @@ td.product-name a{
 }
 @media (max-width: 1199px){
     .menu{
-        flex: 0 0 80%;
-        max-width: 80%;
+        flex: 0 0 83%;
+        max-width: 83%;
     }
     .column__half_lg{
         flex: 0 0 100%;
@@ -2646,6 +2706,13 @@ td.product-name a{
         padding-right: 15px;
         justify-content: flex-start;
     }
+    .menu__list__link{
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .category__application{
+        background-position: 50% 0;
+    }
 }
 @media (max-width: 991px){
     .wrapper{
@@ -2656,8 +2723,8 @@ td.product-name a{
         max-width: 85%;
     }
     .menu__list__link{
-        font-size: 14px;
-        line-height: 16px;
+        font-size: 12px;
+        line-height: 14px;
     }
     .box{
         margin-left: -15px;
@@ -2828,6 +2895,19 @@ td.product-name a{
         height: 110px !important;
         padding-right: 15px;
         border-radius: 0;
+    }
+    .contacts_tel{
+        padding-bottom: 0;
+    }
+    .category__application__link{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .category__application__col{
+        flex: 0 0 65%;
+        max-width: 65%;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 @media (max-width: 767px){
@@ -3073,6 +3153,22 @@ td.product-name a{
     .menu__inside__link{
         padding: 10px 0 0;
     }
+    .about__content p{
+        margin-top: 0;
+    }
+    .directory_content p{
+        margin-top: 0px;
+    }
+    .menu__list__link{
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .category__application__col {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 @media (max-width: 575px){
     .hero__box__circle_center {
@@ -3111,7 +3207,7 @@ td.product-name a{
         line-height: 18px;
     }
     .category__application{
-        padding: 50px 15px;
+        padding: 50px 0px;
     }
     .category__application__btn{
         max-width: 100%;
