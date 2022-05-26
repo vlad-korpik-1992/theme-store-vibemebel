@@ -690,7 +690,7 @@ section{
     height: 218px;
     width: 218px;
     background-color: #00000060;
-    border: 1px solid #000;
+    border: 1px solid #fff;
     backdrop-filter: blur(5px);
     border-radius: 50%;
     padding: 0 25px;
@@ -875,6 +875,7 @@ section{
     color: #fff;
     line-height: 140%;
     padding-bottom: 30px;
+    max-width: 560px;
 }
 .category__application__btn{
     display: flex;
@@ -1247,11 +1248,11 @@ p.topweek__basket__title{
     line-height: 24px;
 }
 .footer{
-    padding: 50px 0 135px 0;
+    padding: 50px 0 40px 0;
     background-color: #f0f0f0;
 }
 .footer__menu{
-    padding-bottom: 205px;
+    padding-bottom: 170px;
 }
 .footer__menu__list{
     display: flex;
