@@ -313,12 +313,12 @@ $(function() {
  $(window).scroll(function() {
   let height = $(window).scrollTop();
    if($(this).scrollTop() > 1) {
-    header.addClass('header_fixed');
+    header.addClass('header--fixed');
     $('body').css({
        'paddingTop': hederHeight+'px'
     });
    } else {
-    header.removeClass('header_fixed');
+    header.removeClass('header--fixed');
     $('body').css({
      'paddingTop': 0
     })

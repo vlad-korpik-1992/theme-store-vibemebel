@@ -47,6 +47,19 @@
                 </a>
             </div>
         </div>
+        <div class="footer__payment">
+            <div class="footer__payment__items">
+                <p class="footer__payment__content">Индивидуальный предприниматель Белявский Вадим Валентинович</p>
+                <p class="footer__payment__content">Свидетельство о регистрации от 29.12.2017, выдано Октябрьским РОВД г.Гродно</p>
+                <p class="footer__payment__content">УНП 591906472</p>
+                <p class="footer__payment__content"><b>Место регистрации:</b><br/>Гродненская обл., г. Гродно, ул. Южная, д. 7, оф. 82</p>
+                <p class="footer__payment__content"><b>Банковские реквизиты:</b><br/>р/с BY59ALFA30132292090010270000 в BYN в ЗАО «Альфа-Банк», БИК: ALFABY2X</p>
+
+            </div>
+            <div class="footer__payment__items">
+                <img class="footer__payment__logo" src="<?php bloginfo('template_url'); ?>/assets/img/payment-logo.png" alt="">
+            </div>
+        </div>
         <div class="benefits-box">
             <div class="benefits__column footer__column">
                 <a class="footer__link" href="mail:"><?php the_field('email_contacts', 39);?></a>

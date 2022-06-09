@@ -1252,7 +1252,7 @@ p.topweek__basket__title{
     background-color: #f0f0f0;
 }
 .footer__menu{
-    padding-bottom: 170px;
+    padding-bottom: 90px;
 }
 .footer__menu__list{
     display: flex;
@@ -2613,6 +2613,32 @@ td.product-name a{
 #my_field_room_field{
     padding-left: 15px !important;
 }
+.footer__payment{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: -15px;
+    margin-right: -15px; 
+    padding-bottom: 50px;   
+}
+.footer__payment__items{
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.footer__payment__items:last-child{
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+.footer__payment__content{
+    font-size: 12px;
+    line-height: 160%;
+    padding-bottom: 10px;
+}
+.footer__payment__content:last-child{
+    padding-bottom: 0;
+}
 @media (min-width: 768px){
     .menu__list__items:hover .menu__inside{
         display: flex;
@@ -2909,6 +2935,13 @@ td.product-name a{
         max-width: 65%;
         padding-left: 0;
         padding-right: 0;
+    }
+    .footer__payment__items, .footer__payment__items:last-child{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .footer__payment__items:last-child{
+        margin-top: 30px;
     }
 }
 @media (max-width: 767px){
