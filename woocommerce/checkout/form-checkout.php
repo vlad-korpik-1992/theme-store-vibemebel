@@ -42,7 +42,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                 <?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
 
-                <p class="checkout__column__content">Примечание: условие доставки мебели в регион при заказе через интернет-магазин</p>
+                <h2 class="checkout__column__title checkout__column__title--top">Доставка:</h2>
+
+                <p class="checkout__column__content--bold checkout__column__content--t0">по г. Гродно:</p>
+
+                <p class="checkout__column__content">20 BYN до подъезда; 30 BYN с подъемом на этаж</p>
+
+                <p class="checkout__column__content--bold">в другой город:</p>
+
+                <p class="checkout__column__content">доставляем по всей РБ через транспортную компанию курьером к дому. Стоимость 30-50 BYN. Итоговую стоимость рассчитаем после подтверждения заказа</p>
+
+                <p class="checkout__column__content--bold">Самовывоз со склада или нашего салона</p>
+
+                <p class="checkout__column__content--bold checkout__column__content--t0">Подробнее с информацией по доставке Вы можете ознокомится <a href="#" class="checkout__column__content__link">здесь</a></p>
 
                 <?php endif; ?>
 
